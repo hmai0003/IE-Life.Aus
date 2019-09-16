@@ -719,7 +719,9 @@
     <Content Include="High-chart\themes\sand-signika.js.map" />
     <Content Include="High-chart\themes\skies.js.map" />
     <Content Include="High-chart\themes\sunset.js.map" />
+    <None Include="Properties\PublishProfiles\life-aus - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\SoberandSound - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\SoberandSound20190823112315 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
