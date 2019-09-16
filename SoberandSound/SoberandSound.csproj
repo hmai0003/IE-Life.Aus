@@ -610,8 +610,6 @@
     <Content Include="Images\coffee.png" />
     <Content Include="Images\drinking.png" />
     <Content Include="Images\drinking2.jpeg" />
-    <Content Include="Images\driving.png" />
-    <Content Include="Images\drivingText.png" />
     <Content Include="Images\female.png" />
     <Content Include="Images\Healthy.jpeg" />
     <Content Include="Images\Helthy.jpeg" />

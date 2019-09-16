@@ -114,20 +114,19 @@
 
         <!--   <a class="navbar-brand" style="display: block; margin: auto;" href="#">Sober And Sound</a> -->
         <!--</nav>-->
-
+    <div class="w3-content" style="max-width:1100px">
         <div>
             @RenderBody()
         </div>
-        <script>
-            function myFunction() {
+    </div>
+        <script>function myFunction() {
                 var x = document.getElementById("myTopnav");
                 if (x.className === "topnav") {
                     x.className += " responsive";
                 } else {
                     x.className = "topnav";
                 }
-            }
-        </script>
+            }</script>
 
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
