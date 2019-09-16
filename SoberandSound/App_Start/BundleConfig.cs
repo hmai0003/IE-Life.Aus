@@ -21,21 +21,19 @@ namespace SoberandSound
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/jquery-3.4.1.js",
-                      "~/Scripts/popper.min.js",
-                      "~/Scripts/bootstrap.min.js"));
+                      "~/Scripts/jquery-3.4.1.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/flip-card.css",
-                      "~/Content/bootstrap.min.css"));
+                      "~/Content/flip-card.css"));
 
             bundles.Add(new StyleBundle("~/bundles/highchart").Include(
                       "~/High-chart/highcharts.js",
                       "~/High-chart/highcharts-more.js",
                       "~/High-chart/modules/exporting.js",
-                      "~/High-chart/modules/export-data.js"));
+                      "~/High-chart/modules/export-data.js",
+                      "~/High-chart/themes/grid-light.js"));
         }
     }
 }
