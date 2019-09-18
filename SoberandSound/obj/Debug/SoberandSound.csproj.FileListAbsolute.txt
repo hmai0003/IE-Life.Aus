@@ -72,7 +72,6 @@ D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.W
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.WebPages.Deployment.xml
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.WebPages.Razor.xml
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\Antlr3.Runtime.pdb
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Debug\SoberandSound.csprojAssemblyReference.cache
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Debug\SoberandSound.csproj.CoreCompileInputs.cache
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Debug\SoberandSound.csproj.CopyComplete
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Debug\SoberandSound.dll
@@ -81,3 +80,4 @@ D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\EntityFr
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\EntityFramework.SqlServer.dll
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\EntityFramework.xml
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\EntityFramework.SqlServer.xml
+D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Debug\SoberandSound.csprojAssemblyReference.cache

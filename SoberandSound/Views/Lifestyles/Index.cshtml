@@ -5,24 +5,182 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<!--The first image and descrption-->
+<div class="container-fluid zero-padding">
+    <div class="row zero-margin">
+        <div class="col-12 zero-padding" style="max-height: 400px; overflow: hidden;">
+            <img src="~/Images/Background1.png" class="full-image" />
+            <!--<div style="position:absolute;top: 50%;left: 50%;transform: translate(-50%, -50%)">
+                <h1 style="color:white;font-size:50px">DRINKING CHOICES<br /><br /> HAVE IT OR LEAVE IT</h1>
+            </div>-->
+        </div>
+    </div>
+</div>
+
+<div class="w3-container" id="introduction">
+    <div class="w3-content" style="max-width:700px">
+        <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Description</span></h3>
+        <p class="w3-large">
+            Australia is a diverse and multicultural country. It is widely known for its history, culture and natural wonders. Australian culture is soft and malleable and that is the reason it's home to many migrants across the world.
+        </p>
+        <p class="w3-large">
+            Life.aus is a platform that aims to highlight the difference in the social aspect of life in Australia versus life back home. The major areas of focus are the drinking habits and the passion for sports that Australians possess. We are certain that by using our website, new migrants will gain some insight into life in Australia.
+        </p>
+    </div>
+</div>
+
+<hr />
+
+
+<!--Egalitarianism content-->
+<div class="w3-row" id="immigrant">
+    <div class="w3-col m6 w3-padding-large">
+        <img src="~/Images/Background1.png" class="full-image" />
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+        <h3 class="w3-center"><span class="w3-tag w3-wide">Egalitarianism</span></h3><br>
+        <p class="w3-large">
+            Australians believe that everyone needs equal opportunities so that Australia is one of the most equal countries in the world. Although many countries are celebrating the ideal of human equality, it can be said that no country has a cultural heritage like Australia.
+
+            The awareness of equality can be seen in the interaction between Australians.
+        </p>
+
+    </div>
+</div>
+
+<hr />
+
+
+<!--HDI content-->
+<div class="w3-container" id="introduction">
+    <div class="w3-content" style="max-width:700px">
+        <h3 class="w3-center"><span class="w3-tag w3-wide">HDI</span></h3>
+        <p class="w3-large">
+            Australia is a diverse and multicultural country. It is widely known for its history, culture and natural wonders. Australian culture is soft and malleable and that is the reason it's home to many migrants across the world.
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div id="stackedBar" style="padding-bottom: 0px;"></div>
+    </div>
+</div>
+
+<hr />
+
+<div class="w3-container" id="introduction">
+    <div class="w3-content" style="max-width:700px">
+        <h3 class="w3-center"><span class="w3-tag w3-wide">Australian Lingo</span></h3>
+        <p class="w3-large">
+            Australia is a diverse and multicultural country. It is widely known for its history, culture and natural wonders. Australian culture is soft and malleable and that is the reason it's home to many migrants across the world.
+        </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
 
 
 
 @foreach (var item in Model)
 {
 
-        <div class="col-lg-3 ">
-            <div class="flip-card" style="padding-bottom:10px;">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h1>@Html.DisplayFor(modelItem => item.ausWord)</h1>                       
-                    </div>
-                    <div class="flip-card-back">
-                        <h1>@Html.DisplayFor(modelItem => item.engWord)</h1>
-                    </div>
+    <div class="col-lg-3 ">
+        <div class="flip-card" style="padding-bottom:10px;padding-top:15px;border-top-width: 0px;border-bottom-width: 0px;border-left-width: 0px;border-right-width: 0px;">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h1>@Html.DisplayFor(modelItem => item.ausWord)</h1>
+                </div>
+                <div class="flip-card-back">
+                    <h1>@Html.DisplayFor(modelItem => item.engWord)</h1>
                 </div>
             </div>
         </div>
+    </div>
 }
+
+
+<script type="text/javascript">
+    Highcharts.chart('stackedBar', {
+
+        chart: {
+            type: 'column',
+        },
+
+        title: {
+            text: 'Total fruit consumtion, grouped by gender'
+        },
+
+        xAxis: {
+            categories: ['2000', '2005', '2007', '2010', '2015']
+        },
+        exporting:
+        {
+            enabled: false
+        },
+        credits: {
+            enabled: false
+        },
+        yAxis: {
+            allowDecimals: false,
+            min: 0,
+            title: {
+                text: 'Number of fruits'
+            }
+        },
+
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/>' +
+                    'Total: ' + this.point.stackTotal;
+            }
+        },
+
+        plotOptions: {
+            column: {
+                stacking: 'normal'
+            }
+        },
+
+        series: [{
+            name: 'Australia',
+            data: [0.81, 0.84, 0.85, 0.87, 0.89],
+            stack: 'Australia'
+        }, {
+            name: 'Germany',
+            data: [0.68, 0.7, 0.71, 0.74, 0.8],
+            stack: 'Germany'
+        }, {
+            name: 'Greece',
+            data: [0.58, 0.66, 0.71, 0.76, 0.75],
+            stack: 'Greece'
+        }, {
+            name: 'India',
+            data: [0.27, 0.29, 0.31, 0.33, 0.38],
+            stack: 'India'
+        }, {
+            name: 'Indonesia',
+            data: [0.38, 0.41, 0.43, 0.45, 0.47],
+            stack: 'Indonesia'
+        }, {
+            name: 'Italy',
+            data: [0.65, 0.71, 0.75, 0.76, 0.81],
+            stack: 'Italy'
+        }, {
+            name: 'China',
+            data: [0.39, 0.42, 0.46, 0.48, 0.54],
+            stack: 'China'
+        }]
+    });</script>
+
 
 
