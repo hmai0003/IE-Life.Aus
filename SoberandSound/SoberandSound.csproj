@@ -47,6 +47,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -121,9 +127,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LifestylesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Lifestyle.cs" />
+    <Compile Include="Models\MyDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -133,7 +142,6 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\flip-card.css" />
     <Content Include="Content\loading.css" />
     <Content Include="Content\quiz.css" />
     <Content Include="favicon.ico" />
@@ -610,6 +618,7 @@
     <Content Include="Images\coffee.png" />
     <Content Include="Images\drinking.png" />
     <Content Include="Images\drinking2.jpeg" />
+    <Content Include="Images\drivingText.png" />
     <Content Include="Images\female.png" />
     <Content Include="Images\Healthy.jpeg" />
     <Content Include="Images\Helthy.jpeg" />
@@ -721,6 +730,7 @@
     <Content Include="High-chart\themes\skies.js.map" />
     <Content Include="High-chart\themes\sunset.js.map" />
     <None Include="Properties\PublishProfiles\life-aus - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\life-aus - Web Deploy1.pubxml" />
     <None Include="Properties\PublishProfiles\SoberandSound - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\SoberandSound20190823112315 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -779,10 +789,14 @@
     <None Include="Views\Home\Images\No.jpeg" />
     <Content Include="Views\Home\Images\table.png" />
     <Content Include="Views\Home\Validate.cshtml" />
+    <Content Include="Views\Lifestyles\Create.cshtml" />
+    <Content Include="Views\Lifestyles\Delete.cshtml" />
+    <Content Include="Views\Lifestyles\Details.cshtml" />
+    <Content Include="Views\Lifestyles\Edit.cshtml" />
+    <Content Include="Views\Lifestyles\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<SoberandSound.Models.Lifestyle>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+@foreach (var item in Model)
+{
+
+        <div class="col-lg-3 ">
+            <div class="flip-card" style="padding-bottom:10px;">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h1>@Html.DisplayFor(modelItem => item.ausWord)</h1>                       
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>@Html.DisplayFor(modelItem => item.engWord)</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+}
+
+
