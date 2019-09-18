@@ -609,17 +609,23 @@
     <Content Include="High-chart\themes\skies.src.js" />
     <Content Include="High-chart\themes\sunset.js" />
     <Content Include="High-chart\themes\sunset.src.js" />
-    <Content Include="Images\28.70%25 fall under category of Total Risky. %282%29.png" />
-    <Content Include="Images\48.60%25 fall under category of Total Risky. %281%29.png" />
+    <Content Include="Images\ballText.png" />
+    <Content Include="Images\drinkingText.png" />
+    <Content Include="Images\drivingText.png" />
+    <Content Include="Images\female.png" />
+    <Content Include="Images\male.png" />
     <Content Include="Images\Background.jpeg" />
     <Content Include="Images\Background1.jpeg" />
-    <Content Include="Images\Background1.png" />
+    <Content Include="Images\Background1Text.png" />
     <Content Include="Images\ball.png" />
     <Content Include="Images\coffee.png" />
     <Content Include="Images\drinking.png" />
     <Content Include="Images\drinking2.jpeg" />
+<<<<<<< HEAD
     <Content Include="Images\drivingText.png" />
     <Content Include="Images\female.png" />
+=======
+>>>>>>> 8b668d0e50733d2d950dd0a89b2566a3d6fba3df
     <Content Include="Images\Healthy.jpeg" />
     <Content Include="Images\Helthy.jpeg" />
     <Content Include="Images\Image.jpeg" />
@@ -779,15 +785,6 @@
     <Content Include="Views\Home\Quiz.cshtml" />
     <Content Include="Images\brain.jpg" />
     <Content Include="Views\Home\Homepage.cshtml" />
-    <None Include="Views\Home\Images\.DS_Store" />
-    <None Include="Views\Home\Images\Background.jpeg" />
-    <Content Include="Views\Home\Images\brain.jpg" />
-    <None Include="Views\Home\Images\Healthy.jpeg" />
-    <None Include="Views\Home\Images\Helthy.jpeg" />
-    <None Include="Views\Home\Images\Image.jpeg" />
-    <Content Include="Views\Home\Images\legalAge.jpg" />
-    <None Include="Views\Home\Images\No.jpeg" />
-    <Content Include="Views\Home\Images\table.png" />
     <Content Include="Views\Home\Validate.cshtml" />
     <Content Include="Views\Lifestyles\Create.cshtml" />
     <Content Include="Views\Lifestyles\Delete.cshtml" />
