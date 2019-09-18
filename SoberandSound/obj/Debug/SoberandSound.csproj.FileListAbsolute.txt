@@ -1,88 +1,3 @@
-<<<<<<< HEAD
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\SoberandSound.dll.config
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\SoberandSound.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\SoberandSound.pdb
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\csc.exe
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\csc.exe.config
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\csc.rsp
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\csi.exe
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\csi.exe.config
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\csi.rsp
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\Microsoft.Managed.Core.targets
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\Microsoft.Win32.Primitives.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.AppContext.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Collections.Immutable.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Console.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Diagnostics.StackTrace.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Globalization.Calendars.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.IO.Compression.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.IO.Compression.ZipFile.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.IO.FileSystem.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.IO.FileSystem.Primitives.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Net.Http.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Net.Sockets.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Reflection.Metadata.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Security.Cryptography.Encoding.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Security.Cryptography.Primitives.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Text.Encoding.CodePages.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Threading.Tasks.Extensions.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.ValueTuple.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Xml.ReaderWriter.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Xml.XmlDocument.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Xml.XPath.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\System.Xml.XPath.XDocument.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\vbc.exe
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\vbc.exe.config
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\vbc.rsp
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\VBCSCompiler.exe
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\roslyn\VBCSCompiler.exe.config
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\Antlr3.Runtime.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\Microsoft.Web.Infrastructure.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\Newtonsoft.Json.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.Helpers.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.Mvc.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.Optimization.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.Razor.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.WebPages.Deployment.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.WebPages.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.WebPages.Razor.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\WebGrease.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\Newtonsoft.Json.xml
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.Helpers.xml
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.Mvc.xml
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.Optimization.xml
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.Razor.xml
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.WebPages.xml
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.WebPages.Deployment.xml
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.WebPages.Razor.xml
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\Antlr3.Runtime.pdb
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Debug\SoberandSound.csproj.CoreCompileInputs.cache
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Debug\SoberandSound.csproj.CopyComplete
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Debug\SoberandSound.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Debug\SoberandSound.pdb
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\EntityFramework.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\EntityFramework.SqlServer.dll
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\EntityFramework.xml
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\EntityFramework.SqlServer.xml
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Debug\SoberandSound.csprojAssemblyReference.cache
-=======
 S:\FIT5120\GitHub\SoberandSound\bin\SoberandSound.dll.config
 S:\FIT5120\GitHub\SoberandSound\bin\SoberandSound.dll
 S:\FIT5120\GitHub\SoberandSound\bin\SoberandSound.pdb
@@ -136,6 +51,8 @@ S:\FIT5120\GitHub\SoberandSound\bin\roslyn\vbc.rsp
 S:\FIT5120\GitHub\SoberandSound\bin\roslyn\VBCSCompiler.exe
 S:\FIT5120\GitHub\SoberandSound\bin\roslyn\VBCSCompiler.exe.config
 S:\FIT5120\GitHub\SoberandSound\bin\Antlr3.Runtime.dll
+S:\FIT5120\GitHub\SoberandSound\bin\EntityFramework.dll
+S:\FIT5120\GitHub\SoberandSound\bin\EntityFramework.SqlServer.dll
 S:\FIT5120\GitHub\SoberandSound\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 S:\FIT5120\GitHub\SoberandSound\bin\Microsoft.Web.Infrastructure.dll
 S:\FIT5120\GitHub\SoberandSound\bin\Newtonsoft.Json.dll
@@ -147,6 +64,8 @@ S:\FIT5120\GitHub\SoberandSound\bin\System.Web.WebPages.Deployment.dll
 S:\FIT5120\GitHub\SoberandSound\bin\System.Web.WebPages.dll
 S:\FIT5120\GitHub\SoberandSound\bin\System.Web.WebPages.Razor.dll
 S:\FIT5120\GitHub\SoberandSound\bin\WebGrease.dll
+S:\FIT5120\GitHub\SoberandSound\bin\EntityFramework.xml
+S:\FIT5120\GitHub\SoberandSound\bin\EntityFramework.SqlServer.xml
 S:\FIT5120\GitHub\SoberandSound\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 S:\FIT5120\GitHub\SoberandSound\bin\Newtonsoft.Json.xml
 S:\FIT5120\GitHub\SoberandSound\bin\System.Web.Helpers.xml
@@ -157,9 +76,8 @@ S:\FIT5120\GitHub\SoberandSound\bin\System.Web.WebPages.xml
 S:\FIT5120\GitHub\SoberandSound\bin\System.Web.WebPages.Deployment.xml
 S:\FIT5120\GitHub\SoberandSound\bin\System.Web.WebPages.Razor.xml
 S:\FIT5120\GitHub\SoberandSound\bin\Antlr3.Runtime.pdb
+S:\FIT5120\GitHub\SoberandSound\obj\Debug\SoberandSound.csprojAssemblyReference.cache
 S:\FIT5120\GitHub\SoberandSound\obj\Debug\SoberandSound.csproj.CoreCompileInputs.cache
 S:\FIT5120\GitHub\SoberandSound\obj\Debug\SoberandSound.csproj.CopyComplete
 S:\FIT5120\GitHub\SoberandSound\obj\Debug\SoberandSound.dll
 S:\FIT5120\GitHub\SoberandSound\obj\Debug\SoberandSound.pdb
-S:\FIT5120\GitHub\SoberandSound\obj\Debug\SoberandSound.csprojAssemblyReference.cache
->>>>>>> 8b668d0e50733d2d950dd0a89b2566a3d6fba3df
