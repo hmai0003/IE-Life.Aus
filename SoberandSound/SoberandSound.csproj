@@ -624,7 +624,6 @@
     <Content Include="Images\Background.jpeg" />
     <Content Include="Images\Background1.jpeg" />
     <Content Include="Images\Background1Text.png" />
-    <Content Include="Images\ball.png" />
     <Content Include="Images\coffee.png" />
     <Content Include="Images\drinking.png" />
     <Content Include="Images\drinking2.jpeg" />
