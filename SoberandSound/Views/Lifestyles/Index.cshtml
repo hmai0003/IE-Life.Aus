@@ -9,7 +9,7 @@
 <div class="container-fluid zero-padding">
     <div class="row zero-margin">
         <div class="col-12 zero-padding" style="max-height: 400px; overflow: hidden;">
-            <img src="~/Images/Background1.png" class="full-image" />
+            <img src="~/Images/Background1Text.png" class="full-image" />
             <!--<div style="position:absolute;top: 50%;left: 50%;transform: translate(-50%, -50%)">
                 <h1 style="color:white;font-size:50px">DRINKING CHOICES<br /><br /> HAVE IT OR LEAVE IT</h1>
             </div>-->
@@ -21,10 +21,7 @@
     <div class="w3-content" style="max-width:700px">
         <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Description</span></h3>
         <p class="w3-large">
-            Australia is a diverse and multicultural country. It is widely known for its history, culture and natural wonders. Australian culture is soft and malleable and that is the reason it's home to many migrants across the world.
-        </p>
-        <p class="w3-large">
-            Life.aus is a platform that aims to highlight the difference in the social aspect of life in Australia versus life back home. The major areas of focus are the drinking habits and the passion for sports that Australians possess. We are certain that by using our website, new migrants will gain some insight into life in Australia.
+            Australia is famous for the liberty and democracy. The wonderful climate and amazing views attract people to move to Australia.This page describes about Australians’ day to day lifestyle.
         </p>
     </div>
 </div>
@@ -35,7 +32,7 @@
 <!--Egalitarianism content-->
 <div class="w3-row" id="immigrant">
     <div class="w3-col m6 w3-padding-large">
-        <img src="~/Images/Background1.png" class="full-image" />
+        <img src="~/Images/Background1Text.png" class="full-image" />
     </div>
 
     <div class="w3-col m6 w3-padding-large">
@@ -43,7 +40,14 @@
         <p class="w3-large">
             Australians believe that everyone needs equal opportunities so that Australia is one of the most equal countries in the world. Although many countries are celebrating the ideal of human equality, it can be said that no country has a cultural heritage like Australia.
 
-            The awareness of equality can be seen in the interaction between Australians.
+            The awareness of equality can be seen in the interaction between Australians. Australians tend to be more informal than other English-speaking people; they can use the same language when dealing with bosses, seniors, friends or rapscallion.
+
+            Unlike most Asian countries, if a group of Australian friends go out to eat dinner bills will be given to each diner. By paying in their way, the status of poor members is not inferior, and wealthy members cannot show their advantages.
+
+            Australia’s fairness is also reflected in policy. In history, Australia is the second country to allow women to vote. And now such fairness is still reflected in the broad support for public education and the medical system.
+
+            Australians are proud of this deep-rooted egalitarianism and have escaped the flamboyant class system of Britain, a long-established country.
+
         </p>
 
     </div>
@@ -57,7 +61,11 @@
     <div class="w3-content" style="max-width:700px">
         <h3 class="w3-center"><span class="w3-tag w3-wide">HDI</span></h3>
         <p class="w3-large">
-            Australia is a diverse and multicultural country. It is widely known for its history, culture and natural wonders. Australian culture is soft and malleable and that is the reason it's home to many migrants across the world.
+            Showing average achievement in key dimensions of human development:<br />
+            -> A long healthy life <br />
+            -> Being Knowledgeable<br />
+            -> Decent standard of living<br />
+
         </p>
     </div>
 </div>
@@ -65,47 +73,77 @@
 <div class="row">
     <div class="col-12">
         <div id="stackedBar" style="padding-bottom: 0px;"></div>
+
     </div>
 </div>
 
 <hr />
 
+<div class="row">
+    <div class="col-12 text-center">
+        <em> Among all the countries Australia has the highest HDI value.</em>
+
+    </div>
+</div>
+
+<hr />
+
+<!--Lingo-->
 <div class="w3-container" id="introduction">
     <div class="w3-content" style="max-width:700px">
         <h3 class="w3-center"><span class="w3-tag w3-wide">Australian Lingo</span></h3>
         <p class="w3-large">
-            Australia is a diverse and multicultural country. It is widely known for its history, culture and natural wonders. Australian culture is soft and malleable and that is the reason it's home to many migrants across the world.
+            The term for Australia slang and pronunciation is called Strine. It makes the words as short as possible. Using slang words in informal social situations makes you sound more natural. Here are twelve popular slang words in Australia — click the flip cards to know the meaning and try them out with your Australian friends!
         </p>
     </div>
+</div>
+
+<div class="row" style="margin-left: 0px;margin-right: 0px;">
+    @foreach (var item in Model)
+    {
+
+        <div class="col-lg-3 ">
+            <div class="flip-card" style="padding-bottom:10px;padding-top:15px;border-top-width: 0px;border-bottom-width: 0px;border-left-width: 0px;border-right-width: 0px;">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h1>@Html.DisplayFor(modelItem => item.ausWord)</h1>
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>@Html.DisplayFor(modelItem => item.engWord)</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
+
+
+
+<!--Game-->
+<hr />
+
+<div class="w3-row w3-padding-32" id="immigrant">
+    <div class="w3-col m6 w3-padding-large">
+        <img src="~/Images/Background1Text.png" class="full-image" />
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+        <h3 class="w3-center"><span class="w3-tag w3-wide">Memory Game</span></h3><br>
+        <p class="w3-large">
+            A fn memory game to test your knowledge
+
+
+        </p>
+        <a href='@Url.Action("Game", "Home")' class="btn btn-danger text-center" style="display:block; margin:0;">Play</a>
+    </div>
+
 </div>
 
 
 
 
 
-
-
-
-
-
-
-
-@foreach (var item in Model)
-{
-
-    <div class="col-lg-3 ">
-        <div class="flip-card" style="padding-bottom:10px;padding-top:15px;border-top-width: 0px;border-bottom-width: 0px;border-left-width: 0px;border-right-width: 0px;">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <h1>@Html.DisplayFor(modelItem => item.ausWord)</h1>
-                </div>
-                <div class="flip-card-back">
-                    <h1>@Html.DisplayFor(modelItem => item.engWord)</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-}
 
 
 <script type="text/javascript">
@@ -116,7 +154,7 @@
         },
 
         title: {
-            text: 'Total fruit consumtion, grouped by gender'
+            text: 'HDI For Different Countries'
         },
 
         xAxis: {
@@ -133,7 +171,7 @@
             allowDecimals: false,
             min: 0,
             title: {
-                text: 'Number of fruits'
+                text: 'HDI'
             }
         },
 

@@ -31,6 +31,11 @@ namespace SoberandSound.Controllers
             return View();
         }
 
+        public ActionResult Game()
+        {
+            return View();
+        }
+
         public ActionResult HomePage()
         {
             if (db.Life.Count() == 0)

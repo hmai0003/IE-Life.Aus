@@ -14,6 +14,9 @@ namespace SoberandSound
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/cardgame").Include(
+                       "~/Scripts/game.js"));
+
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
@@ -34,6 +37,10 @@ namespace SoberandSound
                       "~/High-chart/modules/exporting.js",
                       "~/High-chart/modules/export-data.js",
                       "~/High-chart/themes/grid-light.js"));
+
+            bundles.Add(new StyleBundle("~/Content/gamecss").Include(
+                      "~/Content/game.css"));
+
         }
     }
 }

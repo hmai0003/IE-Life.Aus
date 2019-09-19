@@ -118,6 +118,37 @@ textarea {
     }
 }
 
+@media (min-width: 576px) {
+    .gamecss {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+/*Tablet*/
+@media (min-width: 768px) {
+    .gamecss {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .gamecss {
+    }
+}
+
+@media (min-width: 1200px) {
+    .gamecss {
+    }
+}
+
+.gamecss {
+    padding: 0;
+    width: 100%;
+}
+
+
 
 
 

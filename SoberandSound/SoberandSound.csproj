@@ -142,6 +142,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\game.css" />
     <Content Include="Content\loading.css" />
     <Content Include="Content\quiz.css" />
     <Content Include="favicon.ico" />
@@ -621,11 +622,8 @@
     <Content Include="Images\coffee.png" />
     <Content Include="Images\drinking.png" />
     <Content Include="Images\drinking2.jpeg" />
-<<<<<<< HEAD
     <Content Include="Images\drivingText.png" />
     <Content Include="Images\female.png" />
-=======
->>>>>>> 8b668d0e50733d2d950dd0a89b2566a3d6fba3df
     <Content Include="Images\Healthy.jpeg" />
     <Content Include="Images\Helthy.jpeg" />
     <Content Include="Images\Image.jpeg" />
@@ -740,6 +738,7 @@
     <None Include="Properties\PublishProfiles\SoberandSound - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\SoberandSound20190823112315 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\game.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -791,6 +790,7 @@
     <Content Include="Views\Lifestyles\Details.cshtml" />
     <Content Include="Views\Lifestyles\Edit.cshtml" />
     <Content Include="Views\Lifestyles\Index.cshtml" />
+    <Content Include="Views\Home\Game.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
