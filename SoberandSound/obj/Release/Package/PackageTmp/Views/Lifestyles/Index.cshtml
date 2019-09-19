@@ -1,0 +1,267 @@
+﻿@model IEnumerable<SoberandSound.Models.Lifestyle>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--The first image and descrption-->
+<div class="container-fluid zero-padding">
+    <div class="row zero-margin">
+        <div class="col-12 zero-padding" style="max-height: 600px; overflow: hidden;">
+            <img src="~/Images/Title.png" alt="refuse alcohol" class="full-image"/>
+        </div>
+    </div>
+</div>
+
+
+<div class="w3-container" id="introduction">
+    <div class="w3-content" style="max-width:700px">
+        <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Description</span></h3>
+        <p class="w3-large">
+            Australia is famous for the liberty and democracy. The wonderful climate and amazing views attract people to move to Australia.This page describes about Australians’ day to day lifestyle.
+        </p>
+    </div>
+</div>
+
+<hr />
+
+
+
+<!--Egalitarianism content-->
+<div class="w3-row" id="immigrant">
+    <div class="w3-col m6 w3-padding-large">
+        <img src="~/Images/Equality.jpg" class="full-image" />
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+        <h3 class="w3-center"><span class="w3-tag w3-wide">Egalitarianism</span></h3><br>
+        <p class="w3-large">
+            Australians believe that everyone needs equal opportunities so that Australia is one of the most equal countries in the world. Australians tend to be more informal than other English-speaking people.  In history, Australia is the second country to allow women to vote. And now such fairness is still reflected in the broad support for public education and the medical system.
+
+            Australians are proud of this deep-rooted egalitarianism and have escaped the flamboyant class system of Britain, a long-established country.
+
+        </p>
+
+    </div>
+</div>
+
+<hr />
+
+
+<!--HDI content-->
+<div class="w3-container" id="introduction">
+    <div class="w3-content" style="max-width:700px">
+        <h3 class="w3-center"><span class="w3-tag w3-wide">HDI</span></h3>
+        <p class="w3-large">
+            Showing average achievement in key dimensions of human development:<br />
+            -> A long healthy life <br />
+            -> Being Knowledgeable<br />
+            -> Decent standard of living<br />
+
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div id="stackedBar" style="padding-bottom: 0px;"></div>
+
+    </div>
+</div>
+
+<hr />
+
+<div class="row">
+    <div class="col-12 text-center">
+        <em> Among all the countries Australia has the highest HDI value.</em>
+
+    </div>
+</div>
+<hr />
+
+<!--coffee-->
+<h3 class="w3-center w3-padding-64" style="padding-bottom:20px"><span class="w3-tag w3-wide">Food & Coffee</span></h3>
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="~/Images/flatwhite.png" alt="flat white" style="width:100%;">
+            </div>
+
+            <div class="item">
+                <img src="~/Images/expresso.png" alt="expresso" style="width:100%;">
+            </div>
+
+            <div class="item">
+                <img src="~/Images/latte.png" alt="latte" style="width:100%;">
+            </div>
+
+            <div class="item">
+                <img src="~/Images/cappuccino.png" alt="cappucino" style="width:100%;">
+            </div>
+
+            <div class="item">
+                <img src="~/Images/mocha.png" alt="mocha" style="width:100%;">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+
+<hr />
+
+<!--Lingo-->
+<div class="w3-container" id="introduction">
+    <div class="w3-content" style="max-width:700px">
+        <h3 class="w3-center"><span class="w3-tag w3-wide">Australian Lingo</span></h3>
+        <p class="w3-large">
+            The term for Australia slang and pronunciation is called Strine. It makes the words as short as possible. Using slang words in informal social situations makes you sound more natural. Here are twelve popular slang words in Australia — click the flip cards to know the meaning and try them out with your Australian friends!
+        </p>
+    </div>
+</div>
+
+<div class="row" style="margin-left: 0px;margin-right: 0px;">
+    @foreach (var item in Model)
+    {
+
+        <div class="col-lg-3 ">
+            <div class="flip-card" style="padding-bottom:10px;padding-top:15px;border-top-width: 0px;border-bottom-width: 0px;border-left-width: 0px;border-right-width: 0px;">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h1>@Html.DisplayFor(modelItem => item.ausWord)</h1>
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>@Html.DisplayFor(modelItem => item.engWord)</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
+
+
+
+<!--Game-->
+<hr />
+
+<div class="w3-row w3-padding-32" id="immigrant">
+    <div class="w3-col m6 w3-padding-large">
+        <img src="~/Images/game.jpg" class="full-image" />
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+        <h3 class="w3-center"><span class="w3-tag w3-wide">Memory Game</span></h3><br>
+        <p class="w3-large">
+            A fn memory game to test your knowledge
+
+
+        </p>
+        <a href='@Url.Action("Game", "Home")' class="btn btn-danger text-center" style="display:block; margin:0;">Play</a>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    Highcharts.chart('stackedBar', {
+
+        chart: {
+            type: 'column',
+        },
+
+        title: {
+            text: 'HDI For Different Countries'
+        },
+
+        xAxis: {
+            categories: ['2000', '2005', '2007', '2010', '2015']
+        },
+        exporting:
+        {
+            enabled: false
+        },
+        credits: {
+            enabled: false
+        },
+        yAxis: {
+            allowDecimals: false,
+            min: 0,
+            title: {
+                text: 'HDI'
+            }
+        },
+
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/>' +
+                    'Total: ' + this.point.stackTotal;
+            }
+        },
+
+        plotOptions: {
+            column: {
+                stacking: 'normal'
+            }
+        },
+
+        series: [{
+            name: 'Australia',
+            data: [0.81, 0.84, 0.85, 0.87, 0.89],
+            stack: 'Australia'
+        }, {
+            name: 'Germany',
+            data: [0.68, 0.7, 0.71, 0.74, 0.8],
+            stack: 'Germany'
+        }, {
+            name: 'Greece',
+            data: [0.58, 0.66, 0.71, 0.76, 0.75],
+            stack: 'Greece'
+        }, {
+            name: 'India',
+            data: [0.27, 0.29, 0.31, 0.33, 0.38],
+            stack: 'India'
+        }, {
+            name: 'Indonesia',
+            data: [0.38, 0.41, 0.43, 0.45, 0.47],
+            stack: 'Indonesia'
+        }, {
+            name: 'Italy',
+            data: [0.65, 0.71, 0.75, 0.76, 0.81],
+            stack: 'Italy'
+        }, {
+            name: 'China',
+            data: [0.39, 0.42, 0.46, 0.48, 0.54],
+            stack: 'China'
+        }]
+    });</script>
+
+
+

@@ -80,4 +80,3 @@ D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Debug\So
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Debug\SoberandSound.csproj.CopyComplete
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Debug\SoberandSound.dll
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Debug\SoberandSound.pdb
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Debug\SoberandSound.csprojAssemblyReference.cache
