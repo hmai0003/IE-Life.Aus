@@ -611,9 +611,13 @@
     <Content Include="High-chart\themes\sunset.js" />
     <Content Include="High-chart\themes\sunset.src.js" />
     <Content Include="Images\ballText.png" />
+    <Content Include="Images\cappuccino.png" />
     <Content Include="Images\drinkingText.png" />
     <Content Include="Images\drivingText.png" />
+    <Content Include="Images\expresso.png" />
     <Content Include="Images\female.png" />
+    <Content Include="Images\flatwhite.png" />
+    <Content Include="Images\latte.png" />
     <Content Include="Images\male.png" />
     <Content Include="Images\Background.jpeg" />
     <Content Include="Images\Background1.jpeg" />
@@ -627,6 +631,7 @@
     <Content Include="Images\Healthy.jpeg" />
     <Content Include="Images\Helthy.jpeg" />
     <Content Include="Images\Image.jpeg" />
+    <Content Include="Images\mocha.png" />
     <Content Include="Images\No.jpeg" />
     <Content Include="Images\legalAge.png" />
     <Content Include="Images\playball.jpeg" />
