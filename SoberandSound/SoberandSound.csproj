@@ -614,13 +614,14 @@
     <Content Include="Images\cappuccino.png" />
     <Content Include="Images\drinkingText.png" />
     <Content Include="Images\drivingText.png" />
+    <Content Include="Images\Equality.jpg" />
     <Content Include="Images\expresso.png" />
     <Content Include="Images\flatwhite.png" />
+    <Content Include="Images\game.jpg" />
     <Content Include="Images\latte.png" />
     <Content Include="Images\Background.jpeg" />
     <Content Include="Images\Background1.jpeg" />
     <Content Include="Images\Background1Text.png" />
-    <Content Include="Images\ball.png" />
     <Content Include="Images\coffee.png" />
     <Content Include="Images\drinking.png" />
     <Content Include="Images\drinking2.jpeg" />
@@ -633,6 +634,8 @@
     <Content Include="Images\legalAge.png" />
     <Content Include="Images\playball.jpeg" />
     <Content Include="Images\sport.png" />
+    <Content Include="Images\Title.jpeg" />
+    <Content Include="Images\Title.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
