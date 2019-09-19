@@ -616,18 +616,15 @@
     <Content Include="Images\drivingText.png" />
     <Content Include="Images\Equality.jpg" />
     <Content Include="Images\expresso.png" />
-    <Content Include="Images\female.png" />
     <Content Include="Images\flatwhite.png" />
     <Content Include="Images\game.jpg" />
     <Content Include="Images\latte.png" />
-    <Content Include="Images\male.png" />
     <Content Include="Images\Background.jpeg" />
     <Content Include="Images\Background1.jpeg" />
     <Content Include="Images\Background1Text.png" />
     <Content Include="Images\coffee.png" />
     <Content Include="Images\drinking2.jpeg" />
     <Content Include="Images\drivingText.png" />
-    <Content Include="Images\female.png" />
     <Content Include="Images\Healthy.jpeg" />
     <Content Include="Images\Helthy.jpeg" />
     <Content Include="Images\Image.jpeg" />
@@ -798,6 +795,10 @@
     <Content Include="Views\Lifestyles\Edit.cshtml" />
     <Content Include="Views\Lifestyles\Index.cshtml" />
     <Content Include="Views\Home\Game.cshtml" />
+    <None Include="Images\.DS_Store" />
+    <Content Include="Images\female.png" />
+    <Content Include="Images\legalAge.jpg" />
+    <Content Include="Images\male.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
