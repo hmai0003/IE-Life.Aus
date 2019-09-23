@@ -798,6 +798,8 @@
     <Content Include="Images\female.png" />
     <Content Include="Images\legalAge.jpg" />
     <Content Include="Images\male.png" />
+    <Content Include="Images\airport.jpg" />
+    <Content Include="Images\map.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
