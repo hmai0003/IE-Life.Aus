@@ -76,8 +76,8 @@ D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.W
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.WebPages.Deployment.xml
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\System.Web.WebPages.Razor.xml
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\bin\Antlr3.Runtime.pdb
-D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Release\SoberandSound.csprojAssemblyReference.cache
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Release\SoberandSound.csproj.CoreCompileInputs.cache
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Release\SoberandSound.csproj.CopyComplete
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Release\SoberandSound.dll
 D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Release\SoberandSound.pdb
+D:\Australia\sem 4\FIT5120\IE Project New\IE-Life.Aus\SoberandSound\obj\Release\SoberandSound.csprojAssemblyReference.cache

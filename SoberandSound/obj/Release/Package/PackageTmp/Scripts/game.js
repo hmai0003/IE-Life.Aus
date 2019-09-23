@@ -217,14 +217,14 @@ function congratulations() {
         document.getElementById("starRating").innerHTML = starRating;
         document.getElementById("totalTime").innerHTML = finalTime;
 
-        if (moves >= 8 && moves <= 12) {
-            document.getElementById("customMessage").innerHTML = "You have ";
+        if (moves >= 8 && moves <= 15) {
+            document.getElementById("customMessage").innerHTML = "You Know everything, padawan";
         }
-        else if (moves >= 13 && moves <= 20) {
-            document.getElementById("customMessage").innerHTML = "sso";
+        else if (moves >= 16 && moves <= 20) {
+            document.getElementById("customMessage").innerHTML = "There is still room for improvement";
         }
         else {
-            document.getElementById("customMessage").innerHTML = "asf";
+            document.getElementById("customMessage").innerHTML = "You need to learn more";
         }
 
         //closeicon on modal
