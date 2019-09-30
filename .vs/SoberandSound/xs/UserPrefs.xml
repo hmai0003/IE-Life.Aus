@@ -1,8 +1,10 @@
 ﻿<Properties StartupConfiguration="{519AF623-DFD4-4BD5-90A3-05C2107A7D56}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SoberandSound/Views/Home/HomePage.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SoberandSound/Controllers/HomeController.cs">
     <Files>
-      <File FileName="SoberandSound/Views/Shared/_Layout.cshtml" Line="130" Column="79" />
+      <File FileName="SoberandSound/Views/Home/Index.cshtml" Line="74" Column="75" />
+      <File FileName="SoberandSound/Views/Shared/_Layout.cshtml" Line="132" Column="31" />
       <File FileName="SoberandSound/Views/Home/Homepage.cshtml" Line="97" Column="19" />
+      <File FileName="SoberandSound/Controllers/HomeController.cs" Line="54" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,12 +13,12 @@
             <Node name="SoberandSound" expanded="True">
               <Node name="App_Start" expanded="True" />
               <Node name="Content" expanded="True" />
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="HomeController.cs" selected="True" />
+              </Node>
               <Node name="Images" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True">
-                  <Node name="Homepage.cshtml" selected="True" />
-                </Node>
+                <Node name="Home" expanded="True" />
                 <Node name="Lifestyles" expanded="True" />
                 <Node name="Shared" expanded="True" />
               </Node>
