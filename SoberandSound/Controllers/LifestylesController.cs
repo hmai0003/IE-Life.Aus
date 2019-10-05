@@ -13,7 +13,8 @@ namespace SoberandSound.Controllers
 {
     public class LifestylesController : Controller
     {
-        private MyDbContext db = new MyDbContext(WebConfigurationManager.ConnectionStrings["MyDbContext"].ConnectionString);
+        //private MyDbContext db = new MyDbContext(WebConfigurationManager.ConnectionStrings["MyDbContext"].ConnectionString);
+        private MyDbContext db = new MyDbContext("LifeAusDatabase");
 
         // GET: Lifestyles
         public ActionResult Index()

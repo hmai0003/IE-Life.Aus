@@ -798,6 +798,7 @@
     <Content Include="Images\female.png" />
     <Content Include="Images\legalAge.jpg" />
     <Content Include="Images\male.png" />
+    <Content Include="Views\Sports.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

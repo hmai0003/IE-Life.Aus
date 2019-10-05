@@ -10,7 +10,7 @@ namespace SoberandSound.Models
     {
         public MyDbContext(string connectionString)
         {
-            this.Database.Connection.ConnectionString = connectionString;
+            //this.Database.Connection.ConnectionString = connectionString;
         }
         public DbSet<Lifestyle> Life { get; set; }
     }
