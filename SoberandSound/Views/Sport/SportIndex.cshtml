@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewBag.Title = "SportIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>SportIndex</h2>
+<form>
+    <br />
+    <h3>What kind of sport do you prefer?</h3><br>
+    <label class="option">
+        Futsal
+        <input type="checkbox" value="Futsal" checked="checked">
+        <span class="checkmark"></span>
+    </label>
+    <label class="option">
+        Netball
+        <input type="checkbox" value="Netball">
+        <span class="checkmark"></span>
+    </label>
+    <label class="option">
+        Basketball
+        <input type="checkbox" value="Basketball">
+        <span class="checkmark"></span>
+    </label>
+    <label class="option">
+        Footy
+        <input type="checkbox" value="Footy">
+        <span class="checkmark"></span>
+    </label>
+</form>
+<br />
+<button class="btn" onclick="search()">Search</button>
+<br />
+<div id="map" style="height:500px;width:500px"></div>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1zde6CIKWcz5lnDUNnXFjlj2WuNS8hLI&libraries=places&callback=initMap" 
+        type="text/javascript"></script>
+<script>
+      var map;
+      var service;
+      var infowindow;
+
+      function initMap() {
+        var sydney = new google.maps.LatLng(-33.867, 151.195);
+
+        infowindow = new google.maps.InfoWindow();
+
+        map = new google.maps.Map(
+            document.getElementById('map'), {center: sydney, zoom: 15});   
+    }
+
+    function search() {
+        var sports = document.forms[0];
+        var sportSelected = "";
+
+        var request = {
+          query: '',
+          fields: ['name', 'geometry'],
+        };
+
+        for (i = 0; i < sports.length; i++) {
+            if (sports[i].checked) {
+                sportSelected = sportSelected + sports[i].value + " ";
+            }
+        }
+
+        request.query = 'social sport' + sportSelected + 'in Melbourne';
+
+        service = new google.maps.places.PlacesService(map);
+
+        service.findPlaceFromQuery(request, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+              createMarker(results[i]);
+            }
+
+            map.setCenter(results[0].geometry.location);
+          }
+        });
+    }
+
+      function createMarker(place) {
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent(place.name);
+          infowindow.open(map, this);
+        });
+      }
+</script>
+
+
+
