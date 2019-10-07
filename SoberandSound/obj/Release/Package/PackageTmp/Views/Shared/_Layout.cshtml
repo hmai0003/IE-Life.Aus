@@ -12,16 +12,16 @@
     @Scripts.Render("~/bundles/highchart")
     <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <style>
+
         body {
             font-family: Arial;
-            padding-top:52px;
-
+            padding-top: 52px;
         }
 
         p {
@@ -88,7 +88,7 @@
 
                 .topnav.responsive .icon {
                     position: absolute;
-                    right: 0;
+                    right: 5px;
                     top: 0;
                 }
 
@@ -98,6 +98,133 @@
                     text-align: left;
                 }
         }
+
+        .btn {
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .link {
+            border-color: #ff9800;
+            color: orange;
+        }
+
+            .link:hover {
+                background: #ff9800;
+                color: white;
+            }
+
+        .box {
+            text-align: center;
+            width: 150px;
+        }
+
+        .image {
+            display: block;
+            width: 150px;
+            height: 150px;
+        }
+
+        .overlay {
+            position: relative;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            width: 150px;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #008CBA;
+        }
+
+        .box:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        /* The container */
+.option {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.option input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.option:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.option input:checked ~ .checkmark {
+  background-color: orange;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.option input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.option .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
     </style>
 </head>
 <body>
@@ -106,38 +233,38 @@
     <div class="w3-top">
         <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px; padding:0 !important">
             <div class="topnav" id="myTopnav">
-                <a href='@Url.Action("Homepage", "Home")' class="active">Life.Aus</a>
+                <a href='@Url.Action("Homepage", "Home")' class="active" style="font-weight:bold">Life.Aus</a>
                 <div class="w3-right">
-                    <a href='@Url.Action("Index", "Lifestyles")'>Lifestyle</a>
-                    <a href='@Url.Action("Index", "Home")'>Drinking</a>
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                         <i class="fa fa-bars"></i>
                     </a>
+                    <a href='@Url.Action("Index", "Lifestyles")'>Lifestyle</a>
+                    <a href='@Url.Action("Index", "Home")'>Drinking</a>
+                    <a href='@Url.Action("SportIndex", "Sport")'>Sport</a>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-        <!--   <a class="navbar-brand" style="display: block; margin: auto;" href="#">Sober And Sound</a> -->
-        <!--</nav>-->
     <div class="w3-content" style="max-width:1100px">
         <div>
             @RenderBody()
         </div>
     </div>
-        <script>function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }</script>
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>
