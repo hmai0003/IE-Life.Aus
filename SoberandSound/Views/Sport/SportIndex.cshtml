@@ -4,54 +4,57 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>SportIndex</h2>
-<form id="socialForm">
-    <h3>Filter 1</h3>
-    <label class="option">
-        Social sports
-        <input type="radio" name="filters" value="social sports" checked="checked">
-        <span class="checkmark"></span>
-    </label>
-    <label class="option">
-        Sport courts
-        <input type="radio" name="filters" value="sport courts">
-        <span class="checkmark"></span>
-    </label>
-</form>
-<form id="sportForm">
-    <br />
-    <h3>What kind of sport do you prefer?</h3><br>
-    <label class="option">
-        Futsal
-        <input type="radio" name="sports" value="Futsal" checked="checked">
-        <span class="checkmark"></span>
-    </label>
-    <label class="option">
-        Netball
-        <input type="radio" name="sports" value="Netball">
-        <span class="checkmark"></span>
-    </label>
-    <label class="option">
-        Basketball
-        <input type="radio" name="sports" value="Basketball">
-        <span class="checkmark"></span>
-    </label>
-    <label class="option">
-        Footy
-        <input type="radio" name="sports" value="Footy">
-        <span class="checkmark"></span>
-    </label>
-    
-</form>
-<br />
-<button class="btn" onclick="search()">Search</button>
-<br />
-<div id="map" style="height:400px;width:1100px"></div>
-<br />
+<div class="row">
+    <div class="col-4">
+        <form id="socialForm">
+            <h4>Filter 1</h4>
+            <label class="option">
+                Social sports
+                <input type="radio" name="filters" value="social sports" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+            <label class="option">
+                Sport courts
+                <input type="radio" name="filters" value="sport courts">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+        <form id="sportForm">
+            <br />
+            <h4>What kind of sport do you prefer?</h4><br>
+            <label class="option">
+                Futsal
+                <input type="radio" name="sports" value="Futsal" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+            <label class="option">
+                Netball
+                <input type="radio" name="sports" value="Netball">
+                <span class="checkmark"></span>
+            </label>
+            <label class="option">
+                Basketball
+                <input type="radio" name="sports" value="Basketball">
+                <span class="checkmark"></span>
+            </label>
+            <label class="option">
+                Footy
+                <input type="radio" name="sports" value="Footy">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+
+        <button class="btn" onclick="search()">Search</button>
+    </div>
+    <div class="col-8">
+        <div id="map" style="height:480px;width:750px"></div>
+    </div>
+
+</div>
 <div id="results" class="row"></div>
 <hr />
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1zde6CIKWcz5lnDUNnXFjlj2WuNS8hLI&libraries=places&callback=initMap" 
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1zde6CIKWcz5lnDUNnXFjlj2WuNS8hLI&libraries=places&callback=initMap"
         type="text/javascript"></script>
 <script>
     var results = $('#results');
@@ -63,35 +66,35 @@
     function initMap() {
         var melb = new google.maps.LatLng(-37.814, 144.96332);
         map = new google.maps.Map(
-            document.getElementById('map'), {center: melb, zoom: 15});   
+            document.getElementById('map'), { center: melb, zoom: 15 });
         infowindow = new google.maps.InfoWindow();
 
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
 
-            infowindow.setPosition(pos);
-            infowindow.setContent('Location found.');
-            infowindow.open(map);
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infowindow, map.getCenter());
-          });
+                infowindow.setPosition(pos);
+                infowindow.setContent('Location found.');
+                infowindow.open(map);
+                map.setCenter(pos);
+            }, function () {
+                handleLocationError(true, infowindow, map.getCenter());
+            });
         } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infowindow, map.getCenter());
-        } 
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infowindow, map.getCenter());
+        }
     }
 
     function handleLocationError(browserHasGeolocation, infowindow, pos) {
         infowindow.setPosition(pos);
         infowindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
+            'Error: The Geolocation service failed.' :
+            'Error: Your browser doesn\'t support geolocation.');
         infowindow.open(map);
     }
 
@@ -130,7 +133,7 @@
         service.textSearch(request, callback);
 
         function callback(results, status) {
-        //service.findPlaceFromQuery(request, function (results, status) {
+            //service.findPlaceFromQuery(request, function (results, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
                 for (var i = 0; i < results.length; i++) {
                     displayResults(results[i]);
@@ -144,8 +147,9 @@
     }
 
     function displayResults(place) {
-        var placeCol = $('<div>', { class: 'col-lg-4 col-sm-6 mb-4'})
+        var placeCol = $('<div>', { class: 'col-lg-4 col-sm-6 mb-4' })
         var placeCard = $('<div>', { id: 'place', class: 'card-body' });
+        placeCard.css({ 'backgroundcolor':'grey'})
         var placePhoto = $('<img>', { src: place.photos[0].getUrl({ maxWidth: 400, maxHeight: 200 }), class: 'img-fluid' });
         placePhoto.css({ 'height': '200px', 'width': '400px' });
         var placeName = $('<h3>' + (place.name) + ' </h3>', { class: 'card-title' });
@@ -159,26 +163,26 @@
 
     function createMarker(place) {
         var marker = new google.maps.Marker({
-          map: map,
-          position: place.geometry.location
+            map: map,
+            position: place.geometry.location
         });
         markers.push(marker);
 
-        google.maps.event.addListener(marker, 'click', function() {
-          infowindow.setContent(place.name);
-          infowindow.open(map, this);
+        google.maps.event.addListener(marker, 'click', function () {
+            infowindow.setContent(place.name);
+            infowindow.open(map, this);
         });
     }
 
     function setMapOnAll(map) {
         for (var i = 0; i < markers.length; i++) {
-          markers[i].setMap(map);
+            markers[i].setMap(map);
         }
     }
 
     function toggle(source) {
         checkboxes = document.getElementsByName('sports');
-        for(var i=0, n=checkboxes.length;i<n;i++) {
+        for (var i = 0, n = checkboxes.length; i < n; i++) {
             checkboxes[i].checked = source.checked;
         }
     }
