@@ -56,11 +56,10 @@
 
 <hr />
 <br />
-<div class="container">
+<div class="container" id="mapContainer">
     <div class="row">
-        <div class="col-4 col-sm-4">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-1">
             <form id="socialForm">
-                <h4>Filter 1</h4>
                 <label class="option">
                     Social sports
                     <input type="radio" name="filters" value="social sports" checked="checked">
@@ -99,7 +98,7 @@
 
             <button class="btn" onclick="search()">Search</button>
         </div>
-        <div class="col-8 col-sm-4">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-1">
             <div id="map" style="height:480px;width:700px"></div>
         </div>
     </div>
@@ -111,8 +110,9 @@
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1zde6CIKWcz5lnDUNnXFjlj2WuNS8hLI&libraries=places&callback=initMap"
         type="text/javascript"></script>
 <script>
-    var results = $('#results');
+    var resultsList = $('#results');
     var map;
+    var pos
     var service;
     var infowindow;
     var markers = [];
@@ -126,15 +126,15 @@
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
-                var pos = {
+                pos = {
                     lat: position.coords.latitude,
                     lng: position.coords.longitude
                 };
 
-                infowindow.setPosition(pos);
-                infowindow.setContent('Location found.');
+                //infowindow.setPosition(pos);
+                //infowindow.setContent('Location found.');
                 infowindow.open(map);
-                map.setCenter(pos);
+                map.setCenter(melb);
             }, function () {
                 handleLocationError(true, infowindow, map.getCenter());
             });
@@ -180,24 +180,28 @@
         }
 
         request.query = filterSelected + sportSelected + 'in Melbourne';
-        request.location = map.center;
+        request.location = pos;
         console.log(request.keyword);
 
         service = new google.maps.places.PlacesService(map);
         service.textSearch(request, callback);
 
         function callback(results, status) {
-            //service.findPlaceFromQuery(request, function (results, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
                 for (var i = 0; i < results.length; i++) {
                     displayResults(results[i]);
                     createMarker(results[i]);
-                    console.log(results[i]);
+                    console.log(results[i].geometry.location);
+                    $("a").click(function () {
+                        map.setCenter(results[i].geometry.location);
+                        map.setZoom(15);
+                    });
                 }
-
                 map.setCenter(results[0].geometry.location);
+             
             }
         }
+        map.setZoom(10);
     }
 
     function displayResults(place) {
@@ -207,11 +211,16 @@
         placePhoto.css({ 'height': '200px', 'width': '400px' });
         var placeName = $('<h3>' + (place.name) + ' </h3>', { class: 'card-title' });
         var placeAddress = $('<p>' + (place.formatted_address) + '</p>', { id: 'address' });
-        results.append(placeCol);
+        var placeButton = $('<a>');
+        placeButton.text('Show in map');
+        placeButton.addClass('btn');
+        placeButton.attr("href", "#mapContainer");
+        resultsList.append(placeCol);
         placeCol.append(placeCard);
         placeCard.append(placePhoto);
         placeCard.append(placeName);
         placeCard.append(placeAddress);
+        //placeCard.append(placeButton);
     }
 
     function createMarker(place) {
