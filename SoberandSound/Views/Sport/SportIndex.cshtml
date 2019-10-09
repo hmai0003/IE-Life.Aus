@@ -55,49 +55,57 @@
 </div>
 
 <hr />
-
-
-
-
-
-
-
-
-<form>
-    <br />
-    <h3>What kind of sport do you prefer?</h3><br>
-    <label class="option">
-        Futsal
-        <input type="checkbox" name="sports" value="Futsal" checked="checked">
-        <span class="checkmark"></span>
-    </label>
-    <label class="option">
-        Netball
-        <input type="checkbox" name="sports" value="Netball">
-        <span class="checkmark"></span>
-    </label>
-    <label class="option">
-        Basketball
-        <input type="checkbox" name="sports" value="Basketball">
-        <span class="checkmark"></span>
-    </label>
-    <label class="option">
-        Footy
-        <input type="checkbox" name="sports" value="Footy">
-        <span class="checkmark"></span>
-    </label>
-    <label class="option">
-        Select all
-        <input type="checkbox" onClick="toggle(this)">
-        <span class="checkmark"></span>
-    </label>
-</form>
 <br />
-<button class="btn" onclick="search()">Search</button>
-<br />
-<div id="map" style="height:400px;width:1100px"></div>
-<br />
-<div id="results"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-4 col-sm-4">
+            <form id="socialForm">
+                <h4>Filter 1</h4>
+                <label class="option">
+                    Social sports
+                    <input type="radio" name="filters" value="social sports" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="option">
+                    Sport courts
+                    <input type="radio" name="filters" value="sport courts">
+                    <span class="checkmark"></span>
+                </label>
+            </form>
+            <form id="sportForm">
+                <br />
+                <h4>What kind of sport do you prefer?</h4><br>
+                <label class="option">
+                    Futsal
+                    <input type="radio" name="sports" value="Futsal" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="option">
+                    Netball
+                    <input type="radio" name="sports" value="Netball">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="option">
+                    Basketball
+                    <input type="radio" name="sports" value="Basketball">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="option">
+                    Footy
+                    <input type="radio" name="sports" value="Footy">
+                    <span class="checkmark"></span>
+                </label>
+            </form>
+
+            <button class="btn" onclick="search()">Search</button>
+        </div>
+        <div class="col-8 col-sm-4">
+            <div id="map" style="height:480px;width:700px"></div>
+        </div>
+    </div>
+</div>
+<hr />
+<div id="results" class="row"></div>
 <hr />
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1zde6CIKWcz5lnDUNnXFjlj2WuNS8hLI&libraries=places&callback=initMap"
@@ -148,24 +156,32 @@
         $("#results").html("");
         setMapOnAll(null);
         markers = [];
-        var sports = document.forms[0];
+        var filter = document.getElementsByName('filters');
+        var sports = document.getElementsByName('sports');
+        var filterSelected = "";
         var sportSelected = "";
 
         var request = {
-            query: '',
+            keyword: '',
             radius: '10000'
             //fields: ['name', 'geometry'],
         };
 
-        for (i = 0; i < sports.length; i++) {
-            if (sports[i].checked) {
-                sportSelected = sportSelected + sports[i].value + " ";
+        for (i = 0; i < filter.length; i++) {
+            if (filter[i].checked) {
+                filterSelected = filter[i].value + " ";
             }
         }
 
-        request.query = 'social sports ' + sportSelected + 'in Melbourne';
+        for (i = 0; i < sports.length; i++) {
+            if (sports[i].checked) {
+                sportSelected = sports[i].value + " ";
+            }
+        }
+
+        request.query = filterSelected + sportSelected + 'in Melbourne';
         request.location = map.center;
-        console.log(request.query);
+        console.log(request.keyword);
 
         service = new google.maps.places.PlacesService(map);
         service.textSearch(request, callback);
@@ -176,7 +192,7 @@
                 for (var i = 0; i < results.length; i++) {
                     displayResults(results[i]);
                     createMarker(results[i]);
-                    console.log(results[i].photos[0].getUrl({ maxWidth: 400 }));
+                    console.log(results[i]);
                 }
 
                 map.setCenter(results[0].geometry.location);
@@ -185,13 +201,17 @@
     }
 
     function displayResults(place) {
-        var placeCard = $('<div>', { id: 'place', class: 'card' });
-        var placePhoto = $('<img>', { src: place.photos[0].getUrl({ maxWidth: 400 }) });
-
+        var placeCol = $('<div>', { class: 'col-lg-4 col-sm-6 mb-4' })
+        var placeCard = $('<div>', { id: 'place', class: 'card-body' });
+        var placePhoto = $('<img>', { src: place.photos[0].getUrl({ maxWidth: 400, maxHeight: 200 }), class: 'img-fluid' });
+        placePhoto.css({ 'height': '200px', 'width': '400px' });
         var placeName = $('<h3>' + (place.name) + ' </h3>', { class: 'card-title' });
-        results.append(placeCard);
+        var placeAddress = $('<p>' + (place.formatted_address) + '</p>', { id: 'address' });
+        results.append(placeCol);
+        placeCol.append(placeCard);
         placeCard.append(placePhoto);
         placeCard.append(placeName);
+        placeCard.append(placeAddress);
     }
 
     function createMarker(place) {
@@ -210,13 +230,6 @@
     function setMapOnAll(map) {
         for (var i = 0; i < markers.length; i++) {
             markers[i].setMap(map);
-        }
-    }
-
-    function toggle(source) {
-        checkboxes = document.getElementsByName('sports');
-        for (var i = 0, n = checkboxes.length; i < n; i++) {
-            checkboxes[i].checked = source.checked;
         }
     }
 </script>
