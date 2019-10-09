@@ -4,45 +4,111 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>SportIndex</h2>
-<form>
-    <br />
-    <h3>What kind of sport do you prefer?</h3><br>
-    <label class="option">
-        Futsal
-        <input type="checkbox" name="sports" value="Futsal" checked="checked">
-        <span class="checkmark"></span>
-    </label>
-    <label class="option">
-        Netball
-        <input type="checkbox" name="sports" value="Netball">
-        <span class="checkmark"></span>
-    </label>
-    <label class="option">
-        Basketball
-        <input type="checkbox" name="sports" value="Basketball">
-        <span class="checkmark"></span>
-    </label>
-    <label class="option">
-        Footy
-        <input type="checkbox" name="sports" value="Footy">
-        <span class="checkmark"></span>
-    </label>
-    <label class="option">
-        Select all
-        <input type="checkbox" onClick="toggle(this)">
-        <span class="checkmark"></span>
-    </label>
-</form>
-<br />
-<button class="btn" onclick="search()">Search</button>
-<br />
-<div id="map" style="height:400px;width:1100px"></div>
-<br />
-<div id="results"></div>
+
+<div class="container-fluid zero-padding">
+    <div class="row zero-margin">
+        <div class="col-12 zero-padding" style="max-height: 600px; overflow: hidden;">
+            <img src="~/Images/footy option1.png" alt="refuse alcohol" class="full-image" />
+        </div>
+    </div>
+</div>
+
+
+<div class="w3-container" id="introduction">
+    <div class="w3-content" style="max-width:700px">
+        <h3 class="w3-center" style="padding-top:50px; padding-bottom:30px;"><span class="w3-tag w3-wide">Description</span></h3>
+        <p class="w3-large">
+            Sport is a vital part of Australian Culture. Australians love sports, it acts as a social glue to bring the diverse population together. Melbourne is famous for major sport events and is being named as ‘sporting capital of the world’. Sports has shaped the Australian national identity and made it unique from all other countries.
+        </p>
+    </div>
+</div>
+
 <hr />
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1zde6CIKWcz5lnDUNnXFjlj2WuNS8hLI&libraries=places&callback=initMap" 
+<div class="w3-container" id="introduction">
+    <div class="w3-content" style="max-width:700px">
+        <h3 class="w3-center" style="padding-top:50px; padding-bottom:30px;"><span class="w3-tag w3-wide">Popular Australian Sports</span></h3>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" style="margin-left: 0px;margin-right: 0px;">
+        <div class="col-lg-4 col-sm-1 imhv">
+            <img src="~/Images/rugby.png" style="display: block; width: 100%; height: auto;" />
+            <div class="overla">
+                <div class="text">This is Rugby</div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-1 imhv">
+            <img src="~/Images/footy option1.png" style="display: block; width: 100%; height: auto;" />
+            <div class="overla">
+                <div class="text">This is Footy</div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-1 imhv">
+            <img src="~/Images/cricket option2.png" style="display: block; width: 100%; height: auto;" />
+            <div class="overla">
+                <div class="text">This is Cricket </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-4 col-sm-4">
+            <form id="socialForm">
+                <h4>Filter 1</h4>
+                <label class="option">
+                    Social sports
+                    <input type="radio" name="filters" value="social sports" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="option">
+                    Sport courts
+                    <input type="radio" name="filters" value="sport courts">
+                    <span class="checkmark"></span>
+                </label>
+            </form>
+            <form id="sportForm">
+                <br />
+                <h4>What kind of sport do you prefer?</h4><br>
+                <label class="option">
+                    Futsal
+                    <input type="radio" name="sports" value="Futsal" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="option">
+                    Netball
+                    <input type="radio" name="sports" value="Netball">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="option">
+                    Basketball
+                    <input type="radio" name="sports" value="Basketball">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="option">
+                    Footy
+                    <input type="radio" name="sports" value="Footy">
+                    <span class="checkmark"></span>
+                </label>
+            </form>
+
+            <button class="btn" onclick="search()">Search</button>
+        </div>
+        <div class="col-8 col-sm-4">
+            <div id="map" style="height:480px;width:700px"></div>
+        </div>
+    </div>
+</div>
+<hr />
+<div id="results" class="row"></div>
+<hr />
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1zde6CIKWcz5lnDUNnXFjlj2WuNS8hLI&libraries=places&callback=initMap"
         type="text/javascript"></script>
 <script>
     var results = $('#results');
@@ -54,35 +120,35 @@
     function initMap() {
         var melb = new google.maps.LatLng(-37.814, 144.96332);
         map = new google.maps.Map(
-            document.getElementById('map'), {center: melb, zoom: 15});   
+            document.getElementById('map'), { center: melb, zoom: 15 });
         infowindow = new google.maps.InfoWindow();
 
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
 
-            infowindow.setPosition(pos);
-            infowindow.setContent('Location found.');
-            infowindow.open(map);
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infowindow, map.getCenter());
-          });
+                infowindow.setPosition(pos);
+                infowindow.setContent('Location found.');
+                infowindow.open(map);
+                map.setCenter(pos);
+            }, function () {
+                handleLocationError(true, infowindow, map.getCenter());
+            });
         } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infowindow, map.getCenter());
-        } 
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infowindow, map.getCenter());
+        }
     }
 
     function handleLocationError(browserHasGeolocation, infowindow, pos) {
         infowindow.setPosition(pos);
         infowindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
+            'Error: The Geolocation service failed.' :
+            'Error: Your browser doesn\'t support geolocation.');
         infowindow.open(map);
     }
 
@@ -90,7 +156,9 @@
         $("#results").html("");
         setMapOnAll(null);
         markers = [];
-        var sports = document.forms[0];
+        var filter = document.getElementsByName('filters');
+        var sports = document.getElementsByName('sports');
+        var filterSelected = "";
         var sportSelected = "";
 
         var request = {
@@ -99,26 +167,32 @@
             //fields: ['name', 'geometry'],
         };
 
-        for (i = 0; i < sports.length; i++) {
-            if (sports[i].checked) {
-                sportSelected = sportSelected + sports[i].value + " ";
+        for (i = 0; i < filter.length; i++) {
+            if (filter[i].checked) {
+                filterSelected = filter[i].value + " ";
             }
         }
 
-        request.keyword = 'social sports ' + sportSelected + 'in Melbourne';
+        for (i = 0; i < sports.length; i++) {
+            if (sports[i].checked) {
+                sportSelected = sports[i].value + " ";
+            }
+        }
+
+        request.query = filterSelected + sportSelected + 'in Melbourne';
         request.location = map.center;
         console.log(request.keyword);
 
         service = new google.maps.places.PlacesService(map);
-        service.nearbySearch(request, callback);
+        service.textSearch(request, callback);
 
         function callback(results, status) {
-        //service.findPlaceFromQuery(request, function (results, status) {
+            //service.findPlaceFromQuery(request, function (results, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
                 for (var i = 0; i < results.length; i++) {
                     displayResults(results[i]);
                     createMarker(results[i]);
-                    console.log(results[i].photos[0].getUrl({maxWidth: 400}));
+                    console.log(results[i]);
                 }
 
                 map.setCenter(results[0].geometry.location);
@@ -127,41 +201,37 @@
     }
 
     function displayResults(place) {
-        var placeCard = $('<div>', { id: 'place', class: 'card'});
-        var placePhoto = $('<img>', { src: place.photos[0].getUrl({maxWidth: 400}) });
-        
-        var placeName = $('<h3>' + (place.name) + ' </h3>', {class: 'card-title'});
-        results.append(placeCard);
+        var placeCol = $('<div>', { class: 'col-lg-4 col-sm-6 mb-4' })
+        var placeCard = $('<div>', { id: 'place', class: 'card-body' });
+        var placePhoto = $('<img>', { src: place.photos[0].getUrl({ maxWidth: 400, maxHeight: 200 }), class: 'img-fluid' });
+        placePhoto.css({ 'height': '200px', 'width': '400px' });
+        var placeName = $('<h3>' + (place.name) + ' </h3>', { class: 'card-title' });
+        var placeAddress = $('<p>' + (place.formatted_address) + '</p>', { id: 'address' });
+        results.append(placeCol);
+        placeCol.append(placeCard);
         placeCard.append(placePhoto);
         placeCard.append(placeName);
+        placeCard.append(placeAddress);
     }
 
     function createMarker(place) {
         var marker = new google.maps.Marker({
-          map: map,
-          position: place.geometry.location
+            map: map,
+            position: place.geometry.location
         });
         markers.push(marker);
 
-        google.maps.event.addListener(marker, 'click', function() {
-          infowindow.setContent(place.name);
-          infowindow.open(map, this);
+        google.maps.event.addListener(marker, 'click', function () {
+            infowindow.setContent(place.name);
+            infowindow.open(map, this);
         });
     }
 
     function setMapOnAll(map) {
         for (var i = 0; i < markers.length; i++) {
-          markers[i].setMap(map);
-        }
-    }
-
-    function toggle(source) {
-        checkboxes = document.getElementsByName('sports');
-        for(var i=0, n=checkboxes.length;i<n;i++) {
-            checkboxes[i].checked = source.checked;
+            markers[i].setMap(map);
         }
     }
 </script>
-
 
 
