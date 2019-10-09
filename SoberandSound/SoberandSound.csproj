@@ -615,10 +615,13 @@
     <Content Include="Images\ballText.png" />
     <Content Include="Images\beer.png" />
     <Content Include="Images\cider.png" />
+    <Content Include="Images\cricket option2.png" />
     <Content Include="Images\drinkingText.png" />
     <Content Include="Images\drivingText.png" />
     <Content Include="Images\Equality.jpg" />
     <Content Include="Images\flatwhite.png" />
+    <Content Include="Images\footy option1.png" />
+    <Content Include="Images\footy option2.png" />
     <Content Include="Images\game.jpg" />
     <Content Include="Images\Background.jpeg" />
     <Content Include="Images\Background1.jpeg" />
@@ -635,6 +638,7 @@
     <Content Include="Images\No.jpeg" />
     <Content Include="Images\legalAge.png" />
     <Content Include="Images\playball.jpeg" />
+    <Content Include="Images\rugby.png" />
     <Content Include="Images\shortblack.png" />
     <Content Include="Images\spirits.png" />
     <Content Include="Images\sport.png" />

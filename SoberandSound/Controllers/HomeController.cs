@@ -11,8 +11,8 @@ namespace SoberandSound.Controllers
 {
     public class HomeController : Controller
     {
-        //private MyDbContext db = new MyDbContext(WebConfigurationManager.ConnectionStrings["MyDbContext"].ConnectionString);
-        private MyDbContext db = new MyDbContext("LifeAusDatabase");
+        private MyDbContext db = new MyDbContext(WebConfigurationManager.ConnectionStrings["MyDbContext"].ConnectionString);
+        //private MyDbContext db = new MyDbContext("LifeAusDatabase");
 
         public ActionResult Index()
         {

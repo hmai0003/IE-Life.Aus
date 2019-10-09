@@ -1,2 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters />
+<parameters>
+  <parameter name="MyDbContext-Web.config Connection String" description="MyDbContext Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:life-aus.database.windows.net,1433;Initial Catalog=LifeAusDatabase;Persist Security Info=False;User ID=harsh;Password=Amessage9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Australia\\sem\ 4\\FIT5120\\IE\ Project\ New\\IE-Life\.Aus\\SoberandSound\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MyDbContext']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:life-aus.database.windows.net,1433;Initial Catalog=LifeAusDatabase;Persist Security Info=False;User ID=harsh;Password=Amessage9;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Australia\\sem\ 4\\FIT5120\\IE\ Project\ New\\IE-Life\.Aus\\SoberandSound\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>
