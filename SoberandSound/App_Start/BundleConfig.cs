@@ -17,6 +17,9 @@ namespace SoberandSound
             bundles.Add(new ScriptBundle("~/bundles/cardgame").Include(
                        "~/Scripts/game.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/gamescripts").Include(
+           "~/Scripts/gamescripts.js"));
+
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
@@ -40,6 +43,9 @@ namespace SoberandSound
 
             bundles.Add(new StyleBundle("~/Content/gamecss").Include(
                       "~/Content/game.css"));
+
+            bundles.Add(new StyleBundle("~/Content/gamestyles").Include(
+                       "~/Content/gamestyles.css"));
 
         }
     }

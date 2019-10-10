@@ -12,105 +12,108 @@
             </header>
         </div>
     </div>
+
     <div class="row" style="display: block; margin: auto;">
         <section class="score-panel" style="text-align:center;">
-            <ul class="stars">
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-            </ul>
-
-            <span class="moves">0</span> Move(s)
-
-            <div class="timer">
-            </div>
-
-            <div class="restart" onclick=startGame() style="float:unset;">
-                <i class="fa fa-repeat"></i>
-            </div>
+            <span id="c1" style="font-size:20px;">0</span> Move(s)
         </section>
     </div>
-    <div class="row" style="margin:auto;">
-        <div class="col-12" style="margin:auto;">
-            <ul class="deck" style="margin: auto;" id="card-deck">
-                <li class="card" type="diamond">
-                    <a style="color:black; font-size:25px ">Brekky</a>
-                </li>
-                <li class="card" type="plane">
-                    <a style="color:black; font-size:25px ">HDI</a>
-                </li>
-                <li class="card" type="anchor">
-                    <a style="color:black; font-size:25px ">Food</a>
-                </li>
-                <li class="card" type="bolt">
-                    <a style="color:black; font-size:25px ">Ta</a>
-                </li>
-                <li class="card" type="cube">
-                    <a style="color:black; font-size:25px ">Offense</a>
-                </li>
-                <li class="card" type="anchor">
-                    <a style="color:black; font-size:25px ">BBQ</a>
-                </li>
-                <li class="card" type="leaf">
-                    <a style="color:black; font-size:25px ">Population Density</a>
-                </li>
-                <li class="card" type="bicycle">
-                    <a style="color:black; font-size:25px ">Vaccum Time</a>
-                </li>
-                <li class="card" type="diamond">
-                    <a style="color:black; font-size:25px ">Breakfast</a>
-                </li>
-                <li class="card" type="bomb">
-                    <a style="color:black; font-size:25px ">Arvo</a>
-                </li>
-                <li class="card" type="leaf">
-                    <a style="color:black; font-size:25px ">3 pp/km</a>
-                </li>
-                <li class="card" type="bomb">
-                    <a style="color:black; font-size:25px ">Afternoon</a>
-                </li>
-                <li class="card " type="bolt">
-                    <a style="color:black; font-size:25px ">Thank You</a>
-                </li>
-                <li class="card" type="bicycle">
-                    <a style="color:black; font-size:25px ">10pm-7am</a>
-                </li>
-                <li class="card" type="plane">
-                    <a style="color:black; font-size:25px ">2nd Highest</a>
-                </li>
-                <li class="card" type="cube">
-                    <a style="color:black; font-size:25px ">Kite Flying</a>
-                </li>
-            </ul>
-        </div>
+
+    <div class="row" style="display: block; margin: auto;text-align:center;">
+        <a class="w3-center btn link" onClick="window.location.reload()">Play Again</a>
     </div>
 
-    <div id="popup1" class="overlay">
-        <div class="popup">
-            <h2>Congratulations</h2>
-            <a class="close" href=#><b>x</b></a>
-            <div class="content-1">
-                Congratulations you're a winner
-            </div>
-            <div class="content-2">
-                <p>You made <span id=finalMove> </span> moves </p>
-                <p>in <span id=totalTime> </span> </p>
-                <p>Rating:  <span id=starRating></span></p>
-                <p id="customMessage"></p>
-            </div>
-            <button id="play-again" onclick="playAgain()">
-                Play again
-            </button>
+    <div class="row memory-game">
+        <div class="memory-card" data-framework="aurelia">
+            <img class="front-face" src="~/Images/Thank-You-PixTeller.png" alt="Aurelia" />
+            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+        </div>
+        <div class="memory-card" data-framework="aurelia">
+            <img class="front-face" src="~/Images/Ta.png" alt="Aurelia" />
+            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+        </div>
+        <div class="memory-card" data-framework="vue">
+            <img class="front-face" src="~/Images/Evo.png" alt="Vue" />
+            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+        </div>
+        <div class="memory-card" data-framework="vue">
+            <img class="front-face" src="~/Images/Evening.png" alt="Vue" />
+            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+        </div>
+
+        <div class="memory-card" data-framework="angular">
+            <img class="front-face" src="~/Images/Magic2.png" alt="Angular" />
+            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+        </div>
+        <div class="memory-card" data-framework="angular">
+            <img class="front-face" src="~/Images/Coffee2.png" alt="Angular" />
+            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+        </div>
+
+        <div class="memory-card" data-framework="ember">
+            <img class="front-face" src="~/Images/HDI.png" alt="Ember" />
+            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+        </div>
+        <div class="memory-card" data-framework="ember">
+            <img class="front-face" src="~/Images/2nd highest.png" alt="Ember" />
+            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+        </div>
+
+        <div class="memory-card" data-framework="backbone">
+            <img class="front-face" src="~/Images/Kang and Emu.png" alt="Backbone" />
+            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+        </div>
+        <div class="memory-card" data-framework="backbone">
+            <img class="front-face" src="~/Images/Forward Thinking.png" alt="Backbone" />
+            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+        </div>
+
+        <div class="memory-card" data-framework="react">
+            <img class="front-face" src="~/Images/Servo.png" alt="React" />
+            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+        </div>
+        <div class="memory-card" data-framework="react">
+            <img class="front-face" src="~/Images/Service Station.png" alt="React" />
+            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
         </div>
     </div>
-
 </div>
 
-<script src="~/Scripts/game.js"></script>
-<script type="text/javascript">
-     document.body.onload = startGame();
-</script>
-<script>
-    popup1
-</script>
+<script src="~/Scripts/gamescripts.js"></script>
+
+
+
+
+
+
+
+
+@*<div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Congratulations</h2>
+                    <a class="close" href=#><b>x</b></a>
+                    <div class="content-1">
+                        Congratulations you're a winner
+                    </div>
+                    <div class="content-2">
+                        <p>You made <span id=finalMove> </span> moves </p>
+                        <p>in <span id=totalTime> </span> </p>
+                        <p>Rating:  <span id=starRating></span></p>
+                        <p id="customMessage"></p>
+                    </div>
+                    <button id="play-again" onclick="playAgain()">
+                        Play again
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    <script src="~/Scripts/game.js"></script>
+    <script type="text/javascript">
+         document.body.onload = startGame();
+    </script>
+    <script>
+        popup1
+    </script>*@
 
