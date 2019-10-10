@@ -6,10 +6,12 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/gamecss")
+    @Styles.Render("~/Content/gamestyles")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/highchart")
+
     <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -57,7 +59,7 @@
 
         /* When the radio button is checked, add a blue background */
         .option input:checked ~ .checkmark {
-            background-color: #2196F3;
+            background-color: orange;
         }
 
         /* Create the indicator (the dot/circle - hidden when not checked) */
