@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<script>document.title = "Life.Aus"</script>
+<script>document.title = "Home - Life.Aus"</script>
 
 <div class="container">
     <div id="homeCarousel" class="carousel slide" data-ride="carousel">
@@ -62,31 +62,57 @@
 <hr />
 
 <!-- Immigrant chart -->
-<div class="w3-container" id="introduction">
+<div class="w3-container" id="immigrant">
     <div class="w3-content" style="max-width:700px">
         <h3 class="w3-center">
             <span class="w3-tag w3-wide" style="background-color:#cc7a00; color:black; font-weight:bold">
                 IMMIGRANTS
             </span>
         </h3><br>
-        <p class="w3-large" style="max-width:700px">
-            Australia is a diverse and multicultural country.<br />
+        <p class="w3-large w3-center">
+            Australia is a diverse and multicultural country.
+        </p>
+        <p class="w3-large">
             Australian culture is soft and malleable and that is the reason it's home to many migrants across the world.
         </p><br />
 
         <div id="immigrantChart" style="padding-bottom: 0px;"></div>
         <br />
-
-
-
-        <p class="w3-large" style="text-align:center">
-            United Kingdom - <b>23.5%</b><br />
-            New Zealand - <b>8.8%</b><br />
-            China (excluding Hong Kong and Taiwan) - <b>4.7%</b><br />
-            <b>About one in every four migrants in Australia is from the United Kingdom.</b>
-        </p>
     </div>
-
+    <div align="center" class="w3-center" style="max-width:600px;margin-left: auto;margin-right: auto;">
+        <div class="card-group" align="center">
+            <div class="card">
+                <img src="~/Images/UK.png" class="card-img-top" style="width:100%; height:130px" alt="UK" />
+                <div class="card-body">
+                    <div class="card-title">
+                        <b>United Kingdom - 23.5%</b>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="~/Images/NZ.png" class="card-img-top" style="width:100%; height:140px" alt="NZ" />
+                <div class="card-body">
+                    <div class="card-title">
+                        <b>New Zealand - 8.8%</b>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="~/Images/China.png" class="card-img-top" style="width:100%; height:100px" alt="China" />
+                <div class="card-body">
+                    <div class="card-title">
+                        <b>China (excluding Hong Kong and Taiwan) - 4.7%</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <p class="w3-large" style="text-align:center">
+        <b>
+            About one in every four migrants in Australia is from the United Kingdom.
+        </b>
+    </p>
 </div>
 
 <hr />
@@ -169,56 +195,115 @@
 
 
 <script type="text/javascript">
-    Highcharts.chart('immigrantChart', {
-        chart: {
-            type: 'column'
-        },
-        title: {
-            text: 'Immigrants from top 10 countries'
-        },
+    (function (H) {
 
-        xAxis: {
-            categories: ['United Kingdom', 'New Zealand', 'China', 'Italy', 'Vietnam', 'India', 'Philippiness', 'Greece', 'Germany', 'South Africa'],
-            title: {
-                text: null
-            }
-        },
+        var pendingRenders = [];
 
-        yAxis: {
-            title: {
-                text: 'Count'
-            }
-        },
-        legend: {
-            layout: 'horizontal',
-            align: 'center',
-            verticalAlign: 'bottom'
-        },
+        // https://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport/7557433#7557433
+        function isElementInViewport(el) {
 
-        credits: {
-            enabled: false
-        },
+            var rect = el.getBoundingClientRect();
 
-
-        series: [{
-            name: 'Population',
-            colorByPoint: true,
-            data: [1038160, 389466, 206589, 199123, 159849, 147105, 120538, 109989, 106524, 104131]
-        }],
-
-        responsive: {
-            rules: [{
-                condition: {
-                    maxWidth: 500
-                },
-                chartOptions: {
-                    legend: {
-                        layout: 'horizontal',
-                        align: 'center',
-                        verticalAlign: 'bottom'
-                    }
-                }
-            }]
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (
+                    window.innerHeight ||
+                    document.documentElement.clientHeight
+                ) &&
+                rect.right <= (
+                    window.innerWidth ||
+                    document.documentElement.clientWidth
+                )
+            );
         }
-    });</script>
+
+        H.wrap(H.Series.prototype, 'render', function deferRender(proceed) {
+            var series = this,
+                renderTo = this.chart.container.parentNode;
+
+            // It is appeared, render it
+            if (isElementInViewport(renderTo) || !series.options.animation) {
+                proceed.call(series);
+
+                // It is not appeared, halt renering until appear
+            } else {
+                pendingRenders.push({
+                    element: renderTo,
+                    appear: function () {
+                        proceed.call(series);
+                    }
+                });
+            }
+        });
+
+        function recalculate() {
+            pendingRenders.forEach(function (item) {
+                if (isElementInViewport(item.element)) {
+                    item.appear();
+                    H.erase(pendingRenders, item);
+                }
+            });
+        }
+
+        if (window.addEventListener) {
+            ['DOMContentLoaded', 'load', 'scroll', 'resize']
+                .forEach(function (eventType) {
+                    addEventListener(eventType, recalculate, false);
+                });
+        }
+
+    }(Highcharts));
+Highcharts.chart('immigrantChart', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Immigrants from top 10 countries'
+    },
+
+    xAxis: {
+        categories: ['United Kingdom', 'New Zealand', 'China', 'Italy', 'Vietnam', 'India', 'Philippiness', 'Greece', 'Germany', 'South Africa'],
+        title: {
+            text: null
+        }
+    },
+
+    yAxis: {
+        title: {
+            text: 'Count'
+        }
+    },
+    legend: {
+        layout: 'horizontal',
+        align: 'center',
+        verticalAlign: 'bottom'
+    },
+
+    credits: {
+        enabled: false
+    },
+
+
+    series: [{
+        name: 'Population',
+        colorByPoint: true,
+        data: [1038160, 389466, 206589, 199123, 159849, 147105, 120538, 109989, 106524, 104131]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+});</script>
 

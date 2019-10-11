@@ -617,6 +617,7 @@
     <Content Include="Images\ballText.png" />
     <Content Include="Images\bbq.png" />
     <Content Include="Images\beer.png" />
+    <Content Include="Images\China.png" />
     <Content Include="Images\cider.png" />
     <Content Include="Images\city.png" />
     <Content Include="Images\Coffee2.png" />
@@ -648,6 +649,7 @@
     <Content Include="Images\Memory Game.png" />
     <Content Include="Images\No.jpeg" />
     <Content Include="Images\legalAge.png" />
+    <Content Include="Images\NZ.png" />
     <Content Include="Images\playball.jpeg" />
     <Content Include="Images\playFooty.png" />
     <Content Include="Images\Rugby.jpg" />
@@ -660,6 +662,7 @@
     <Content Include="Images\Ta.png" />
     <Content Include="Images\Thank-You-PixTeller.png" />
     <Content Include="Images\topimg.png" />
+    <Content Include="Images\UK.png" />
     <Content Include="Images\wine.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
