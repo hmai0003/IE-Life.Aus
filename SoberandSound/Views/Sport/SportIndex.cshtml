@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <script>document.title = "Sports - Life.Aus"</script>
+<script>document.title = "Sports - Life.Aus"</script>
 <div class="container-fluid zero-padding">
     <div class="row zero-margin">
         <div class="col-12 zero-padding" style="max-height: 600px; overflow: hidden;">
@@ -102,11 +102,11 @@
 <br />
 <br />
 
-<div class="container">
+<div class="container" id="mapContainer">
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-1">
             <form id="socialForm">
-                <h4>Choose A Venue</h4>
+                <h4>Choose A Venue</h4><br />
                 <label class="option">
                     Social sports
                     <input type="radio" name="filters" value="social sports" checked="checked">
@@ -248,24 +248,37 @@
                 }
 
                 map.setCenter(results[0].geometry.location);
+                function displayResults(place) {
+                    var placeCol = $('<div>', { class: 'col-lg-4 col-sm-6 mb-4' })
+                    var placeCard = $('<div>', { id: 'place', class: 'card-body' });
+                    var placePhoto = $('<img>', { src: place.photos[0].getUrl({ maxWidth: 400, maxHeight: 200 }), class: 'img-fluid' });
+                    placePhoto.css({ 'height': '200px', 'width': '400px' });
+                    var placeName = $('<h3>' + (place.name) + ' </h3>', { class: 'card-title' });
+                    var placeAddress = $('<p>' + (place.formatted_address) + '</p>', { id: 'address' });
+                    var placeButton = $('<a>', { id: results.indexOf(place) });
+                    placeButton.addClass("btn");
+                    placeButton.text("Show location");
+                    placeButton.attr("href", "#mapContainer");
+
+                    resultsList.append(placeCol);
+                    placeCol.append(placeCard);
+                    placeCard.append(placePhoto);
+                    placeCard.append(placeName);
+                    placeCard.append(placeAddress);
+                    placeCard.append(placeButton);
+
+                    $("a").click(function () {
+                        var x = $(this).attr('id');
+                        map.setCenter(results[x].geometry.location);
+                        map.setZoom(15);
+                    });
+                }
             }
         }
         map.setZoom(10);
     }
 
-    function displayResults(place) {
-        var placeCol = $('<div>', { class: 'col-lg-4 col-sm-6 mb-4' })
-        var placeCard = $('<div>', { id: 'place', class: 'card-body' });
-        var placePhoto = $('<img>', { src: place.photos[0].getUrl({ maxWidth: 400, maxHeight: 200 }), class: 'img-fluid' });
-        placePhoto.css({ 'height': '200px', 'width': '400px' });
-        var placeName = $('<h3>' + (place.name) + ' </h3>', { class: 'card-title' });
-        var placeAddress = $('<p>' + (place.formatted_address) + '</p>', { id: 'address' });
-        resultsList.append(placeCol);
-        placeCol.append(placeCard);
-        placeCard.append(placePhoto);
-        placeCard.append(placeName);
-        placeCard.append(placeAddress);
-    }
+
 
     function createMarker(place) {
         var marker = new google.maps.Marker({
