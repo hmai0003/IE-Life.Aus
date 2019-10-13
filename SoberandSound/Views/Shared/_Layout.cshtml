@@ -19,6 +19,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://kit.fontawesome.com/32dfb86fb2.js" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -150,6 +151,7 @@
                 padding: 14px 16px;
                 text-decoration: none;
                 font-size: 17px;
+                letter-spacing: 0px;
             }
 
                 .topnav a:hover {
@@ -253,22 +255,30 @@
             transform: translate(-50%, -50%);
             text-align: center;
         }
+
+        .footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px; padding:0 !important">
             <div class="topnav" id="myTopnav">
-                <a href='@Url.Action("Homepage", "Home")' class="active" style="font-weight:bold">Life.Aus</a>
+                <a href='@Url.Action("Homepage", "Home")' class="active" style="font-weight:bold"><i class="fas fa-home"></i> Life.Aus</a>
                 <div class="w3-right">
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                         <i class="fa fa-bars"></i>
                     </a>
-                    <a href='@Url.Action("Index", "Lifestyles")'>Lifestyle</a>
-                    <a href='@Url.Action("Index", "Home")'>Drinking</a>
-                    <a href='@Url.Action("SportIndex", "Sport")'>Sport</a>
+                    <a href='@Url.Action("Index", "Lifestyles")'><i class="far fa-smile"></i> Lifestyle</a>
+                    <a href='@Url.Action("Index", "Home")'><i class="fas fa-glass-cheers"></i> Drinking</a>
+                    <a href='@Url.Action("SportIndex", "Sport")'><i class="fas fa-football-ball"></i> Sport</a>
                 </div>
             </div>
         </div>
@@ -277,8 +287,15 @@
     <div class="w3-content" style="max-width:1100px">
         <div>
             @RenderBody()
+            <hr />
+            <div>
+                <p class="text-muted w3-center">
+                    Copyright ©2019 Tech Phantoms. All Rights Reserved.
+                </p>
+            </div>
         </div>
     </div>
+    
 
     <script>
         function myFunction() {
