@@ -844,6 +844,7 @@
     <Content Include="Images\male.png" />
     <Content Include="Views\Sports.cshtml" />
     <Content Include="Views\Sport\SportIndex.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

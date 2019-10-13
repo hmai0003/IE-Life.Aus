@@ -21,6 +21,12 @@ namespace SoberandSound.Controllers
             return View();
         }
 
+        public ActionResult About()
+        {
+
+
+            return View();
+        }
 
         public ActionResult Quiz()
         {
