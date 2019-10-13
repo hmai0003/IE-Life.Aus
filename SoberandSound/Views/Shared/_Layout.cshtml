@@ -255,15 +255,6 @@
             transform: translate(-50%, -50%);
             text-align: center;
         }
-
-        .footer {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: white;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
@@ -288,11 +279,12 @@
         <div>
             @RenderBody()
             <hr />
-            <div>
+            <footer>
                 <p class="text-muted w3-center">
-                    Copyright ©2019 Tech Phantoms. All Rights Reserved.
+                    Copyright &copy;2019 Tech Phantoms. All Rights Reserved.
+                    <a href='@Url.Action("About", "Home")'> About</a>
                 </p>
-            </div>
+            </footer>
         </div>
     </div>
     
