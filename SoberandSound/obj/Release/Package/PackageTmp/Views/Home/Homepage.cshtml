@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<script>document.title = "Life.Aus"</script>
+<script>document.title = "Home - Life.Aus"</script>
 
 <div class="container">
     <div id="homeCarousel" class="carousel slide" data-ride="carousel">
@@ -13,18 +13,22 @@
             <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#homeCarousel" data-slide-to="1"></li>
             <li data-target="#homeCarousel" data-slide-to="2"></li>
+            <li data-target="#homeCarousel" data-slide-to="3"></li>
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="~/Images/drivingText.png" alt="lifestyle" style="width:100%;">
+                <img src="~/Images/airport.png" alt="lifestyle" style="width:100%;height:500px">
             </div>
             <div class="carousel-item">
-                <img src="~/Images/drinkingText.png" alt="drinking" style="width:100%;">
+                <img src="~/Images/map.png" alt="drinking" style="width:100%;height:500px">
             </div>
             <div class="carousel-item">
-                <img src="~/Images/ballText.png" alt="sport" style="width:100%;">
+                <img src="~/Images/city.png" alt="sport" style="width:100%;height:500px">
+            </div>
+            <div class="carousel-item">
+                <img src="~/Images/drinking.png" alt="sport" style="width:100%;height:500px">
             </div>
         </div>
 
@@ -41,7 +45,11 @@
 <!-- Project description -->
 <div class="w3-container" id="introduction">
     <div class="w3-content" style="max-width:700px">
-        <h3 class="w3-center" style="padding-bottom:20px;padding-top:60px"><span class="w3-tag w3-wide">Description</span></h3>
+        <h3 class="w3-center" style="padding-bottom:20px;padding-top:60px">
+            <span class="w3-tag w3-wide" style="background-color:#cc7a00; color:black; font-weight:bold">
+                DESCRIPTION
+            </span>
+        </h3>
 
         <p class="w3-large">
             Life.aus is a platform that aims to highlight the difference in the
@@ -54,27 +62,57 @@
 <hr />
 
 <!-- Immigrant chart -->
-<div class="w3-container" id="introduction">
+<div class="w3-container" id="immigrant">
     <div class="w3-content" style="max-width:700px">
-        <h3 class="w3-center"><span class="w3-tag w3-wide">Immigrants</span></h3><br>
-        <p class="w3-large" style="max-width:700px">
-            Australia is a diverse and multicultural country.<br />
+        <h3 class="w3-center">
+            <span class="w3-tag w3-wide" style="background-color:#cc7a00; color:black; font-weight:bold">
+                IMMIGRANTS
+            </span>
+        </h3><br>
+        <p class="w3-large w3-center">
+            Australia is a diverse and multicultural country.
+        </p>
+        <p class="w3-large">
             Australian culture is soft and malleable and that is the reason it's home to many migrants across the world.
         </p><br />
 
         <div id="immigrantChart" style="padding-bottom: 0px;"></div>
         <br />
-
-
-
-        <p class="w3-large" style="text-align:center">
-            United Kingdom - <b>23.5%</b><br />
-            New Zealand - <b>8.8%</b><br />
-            China (excluding Hong Kong and Taiwan) - <b>4.7%</b><br />
-            <b>About one in every four migrants in Australia is from the United Kingdom.</b>
-        </p>
     </div>
-
+    <div align="center" class="w3-center" style="max-width:600px;margin-left: auto;margin-right: auto;">
+        <div class="card-group" align="center">
+            <div class="card">
+                <img src="~/Images/UK.png" class="card-img-top" style="width:100%; height:130px" alt="UK" />
+                <div class="card-body">
+                    <div class="card-title">
+                        <b>United Kingdom - 23.5%</b>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="~/Images/NZ.png" class="card-img-top" style="width:100%; height:140px" alt="NZ" />
+                <div class="card-body">
+                    <div class="card-title">
+                        <b>New Zealand - 8.8%</b>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="~/Images/China.png" class="card-img-top" style="width:100%; height:100px" alt="China" />
+                <div class="card-body">
+                    <div class="card-title">
+                        <b>China (excluding Hong Kong and Taiwan) - 4.7%</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <p class="w3-large" style="text-align:center">
+        <b>
+            About one in every four migrants in Australia is from the United Kingdom.
+        </b>
+    </p>
 </div>
 
 <hr />
@@ -82,13 +120,17 @@
 <!-- Lifestyle introduction -->
 <div class="w3-row w3-padding-64" id="lifestyle">
     <div class="w3-col m6 w3-padding-large">
-        <h3 class="w3-center"><span class="w3-tag w3-wide">Lifestyle</span></h3><br>
+        <h3 class="w3-center">
+            <span class="w3-tag w3-wide" style="background-color:#cc7a00; color:black; font-weight:bold">
+                LIFESTYLE
+            </span>
+        </h3><br>
         <p class="w3-large">
             Australian lifestyle is about indulging into different activities that create joy, laughter,
             contentment and connections with people.
         </p>
         <p class="w3-large">
-            It is rated as the most liveable city across the nation. So, here are some interesting facts about
+            It is rated as the most <i> liveable city </i> across the nation. So, here are some interesting facts about
             Australian culture which will blow away your mind.
         </p>
         <br />
@@ -109,14 +151,17 @@
     </div>
 
     <div class="w3-col m6 w3-padding-large">
-        <h3 class="w3-center"><span class="w3-tag w3-wide">Drinking Culture</span></h3><br>
+        <h3 class="w3-center">
+            <span class="w3-tag w3-wide" style="background-color:#cc7a00; color:black; font-weight:bold">
+                DRINKING CULTURE
+            </span>
+        </h3><br>
         <p class="w3-large">
-            Alcohol plays an integral part of Australian culture. It is vital in all celebrations, social activities and for
-            relaxation after work. Australia is known for its <b>“Alcoholic Beverages”</b>.
+            Australia is known for its <i> Alcoholic Beverages </i>. It plays an integral part of the culture. Vital in all celebrations,
+            social activities and for relaxation after work.
         </p>
         <p class="w3-large">
-            Drinking responsibly and knowing limit is something which need to be taken into consideration.
-            This section familiarize you with the Australian drinking culture.
+            This section will familiarize you with the Australian drinking culture. Even talks about how to drink responsibly.
         </p>
         <br />
         <a class="w3-right btn link" href='@Url.Action("Index", "Home")'>Read more >></a>
@@ -128,12 +173,16 @@
 <!-- Sport introduction -->
 <div class="w3-row w3-padding-64" id="sport">
     <div class="w3-col m6 w3-padding-large">
-        <h3 class="w3-center"><span class="w3-tag w3-wide">Sport</span></h3><br>
+        <h3 class="w3-center">
+            <span class="w3-tag w3-wide" style="background-color:#cc7a00; color:black; font-weight:bold">
+                SPORT
+            </span>
+        </h3><br>
         <p class="w3-large">
-            The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet,
-            consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use ingredients.
+            Sports is an important part of the Australian Culture. Sports has shaped the Australian National Identity through many events.
+        </p>
+        <p class="w3-large">
+            This section will introduce you to Social Sports which is something unusual, interesting and famous in Australia.
         </p>
         <br />
         <a class="w3-left btn link" href='@Url.Action("SportIndex", "Sport")'>Read more >></a>
@@ -146,56 +195,115 @@
 
 
 <script type="text/javascript">
-    Highcharts.chart('immigrantChart', {
-        chart: {
-            type: 'column'
-        },
-        title: {
-            text: 'Immigrants from top 10 countries'
-        },
+    (function (H) {
 
-        xAxis: {
-            categories: ['United Kingdom', 'New Zealand', 'China', 'Italy', 'Vietnam', 'India', 'Philippiness', 'Greece', 'Germany', 'South Africa'],
-            title: {
-                text: null
-            }
-        },
+        var pendingRenders = [];
 
-        yAxis: {
-            title: {
-                text: 'Count'
-            }
-        },
-        legend: {
-            layout: 'horizontal',
-            align: 'center',
-            verticalAlign: 'bottom'
-        },
+        // https://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport/7557433#7557433
+        function isElementInViewport(el) {
 
-        credits: {
-            enabled: false
-        },
+            var rect = el.getBoundingClientRect();
 
-
-        series: [{
-            name: 'Population',
-            colorByPoint: true,
-            data: [1038160, 389466, 206589, 199123, 159849, 147105, 120538, 109989, 106524, 104131]
-        }],
-
-        responsive: {
-            rules: [{
-                condition: {
-                    maxWidth: 500
-                },
-                chartOptions: {
-                    legend: {
-                        layout: 'horizontal',
-                        align: 'center',
-                        verticalAlign: 'bottom'
-                    }
-                }
-            }]
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (
+                    window.innerHeight ||
+                    document.documentElement.clientHeight
+                ) &&
+                rect.right <= (
+                    window.innerWidth ||
+                    document.documentElement.clientWidth
+                )
+            );
         }
-    });</script>
+
+        H.wrap(H.Series.prototype, 'render', function deferRender(proceed) {
+            var series = this,
+                renderTo = this.chart.container.parentNode;
+
+            // It is appeared, render it
+            if (isElementInViewport(renderTo) || !series.options.animation) {
+                proceed.call(series);
+
+                // It is not appeared, halt renering until appear
+            } else {
+                pendingRenders.push({
+                    element: renderTo,
+                    appear: function () {
+                        proceed.call(series);
+                    }
+                });
+            }
+        });
+
+        function recalculate() {
+            pendingRenders.forEach(function (item) {
+                if (isElementInViewport(item.element)) {
+                    item.appear();
+                    H.erase(pendingRenders, item);
+                }
+            });
+        }
+
+        if (window.addEventListener) {
+            ['DOMContentLoaded', 'load', 'scroll', 'resize']
+                .forEach(function (eventType) {
+                    addEventListener(eventType, recalculate, false);
+                });
+        }
+
+    }(Highcharts));
+Highcharts.chart('immigrantChart', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Immigrants from top 10 countries'
+    },
+
+    xAxis: {
+        categories: ['United Kingdom', 'New Zealand', 'China', 'Italy', 'Vietnam', 'India', 'Philippiness', 'Greece', 'Germany', 'South Africa'],
+        title: {
+            text: null
+        }
+    },
+
+    yAxis: {
+        title: {
+            text: 'Count'
+        }
+    },
+    legend: {
+        layout: 'horizontal',
+        align: 'center',
+        verticalAlign: 'bottom'
+    },
+
+    credits: {
+        enabled: false
+    },
+
+
+    series: [{
+        name: 'Population',
+        colorByPoint: true,
+        data: [1038160, 389466, 206589, 199123, 159849, 147105, 120538, 109989, 106524, 104131]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+});</script>
 

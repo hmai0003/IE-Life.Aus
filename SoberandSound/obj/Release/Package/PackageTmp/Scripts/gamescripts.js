@@ -4,6 +4,18 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let moves = 0;
+let counter = 0;
+
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function () {
+    modal.style.display = "none";
+};
+window.onclick = function (event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
 
 function flipCard() {
     if (lockBoard) return;
@@ -33,8 +45,21 @@ function checkForMatch() {
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-
+    counter++;
     resetBoard();
+    if (counter === 6)
+    {
+        if (moves >= 6 && moves <= 11) {
+            document.getElementById("customMessage").innerHTML = "You Know everything";
+        }
+        else if (moves >= 12 && moves <= 15) {
+            document.getElementById("customMessage").innerHTML = "There is still room for improvement";
+        }
+        else {
+            document.getElementById("customMessage").innerHTML = "You need to learn more";
+        }
+        modal.style.display = "block";
+    }
 }
 
 function unflipCards() {

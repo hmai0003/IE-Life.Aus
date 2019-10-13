@@ -4,12 +4,12 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+    <script>document.title = "Lifestyle - Life.Aus"</script>
 <!--The first image and descrption-->
 <div class="container-fluid zero-padding">
     <div class="row zero-margin">
-        <div class="col-12 zero-padding" style="max-height: 600px; overflow: hidden;">
-            <img src="~/Images/Title.png" alt="refuse alcohol" class="full-image" />
+        <div class="col-12 zero-padding" style="height: 500px; overflow: hidden;">
+            <img src="~/Images/bbq.png" alt="refuse alcohol" class="full-image" />
         </div>
     </div>
 </div>
@@ -17,7 +17,7 @@
 
 <div class="w3-container" id="introduction">
     <div class="w3-content" style="max-width:700px">
-        <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Description</span></h3>
+        <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide" style="background-color:#cc7a00; color:black; font-weight:bold">Description</span></h3>
         <p class="w3-large">
             Australia is famous for the liberty and democracy. The wonderful climate and amazing views attract people to move to Australia.This page describes about Australians’ day to day lifestyle.
         </p>
@@ -35,7 +35,7 @@
     </div>
 
     <div class="w3-col m6 w3-padding-large">
-        <h3 class="w3-center"><span class="w3-tag w3-wide">Egalitarianism</span></h3><br>
+        <h3 class="w3-center"><span class="w3-tag w3-wide" style="background-color:#cc7a00; color:black; font-weight:bold">Egalitarianism</span></h3><br>
         <p class="w3-large">
             Australians believe that everyone needs equal opportunities so that Australia is one of the most equal countries in the world. Australians tend to be more informal than other English-speaking people.  In history, Australia is the second country to allow women to vote. And now such fairness is still reflected in the broad support for public education and the medical system.
 
@@ -52,7 +52,7 @@
 <!--HDI content-->
 <div class="w3-container" id="introduction">
     <div class="w3-content" style="max-width:700px">
-        <h3 class="w3-center"><span class="w3-tag w3-wide">HDI</span></h3>
+        <h3 class="w3-center"><span class="w3-tag w3-wide" style="background-color:#cc7a00; color:black; font-weight:bold">HDI</span></h3>
         <p class="w3-large">
             Showing average achievement in key dimensions of human development:<br />
             -> A long healthy life <br />
@@ -81,7 +81,7 @@
 <hr />
 
 <!--coffee-->
-<h3 class="w3-center" style="padding-bottom:20px"><span class="w3-tag w3-wide">Coffee</span></h3>
+<h3 class="w3-center" style="padding-bottom:20px"><span class="w3-tag w3-wide" style="background-color:#cc7a00; color:black; font-weight:bold">Coffee</span></h3>
 <div class="container">
     <p class="w3-large">
         Coffee has also become very popular in Australia and is often described as one of the most dynamic and developed coffee in the world. This popularity has not stood out from the big chains but is the product of independent cafes of Italian and Greek origin.
@@ -132,7 +132,7 @@
 <!--Lingo-->
 <div class="w3-container" id="introduction">
     <div class="w3-content" style="max-width:700px">
-        <h3 class="w3-center"><span class="w3-tag w3-wide">Australian Lingo</span></h3>
+        <h3 class="w3-center"><span class="w3-tag w3-wide" style="background-color:#cc7a00; color:black; font-weight:bold">Australian Lingo</span></h3>
         <p class="w3-large">
             The term for Australia slang and pronunciation is called Strine. It makes the words as short as possible. Using slang words in informal social situations makes you sound more natural. Here are twelve popular slang words in Australia — click the flip cards to know the meaning and try them out with your Australian friends!
         </p>
@@ -170,7 +170,7 @@
     </div>
 
     <div class="w3-col m6 w3-padding-large">
-        <h3 class="w3-center"><span class="w3-tag w3-wide">Memory Game</span></h3><br>
+        <h3 class="w3-center"><span class="w3-tag w3-wide" style="background-color:#cc7a00; color:black; font-weight:bold">Memory Game</span></h3><br>
         <p class="w3-large">
             A fun memory game to test your knowledge
 
@@ -188,6 +188,65 @@
 
 
 <script type="text/javascript">
+    (function (H) {
+
+        var pendingRenders = [];
+
+        // https://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport/7557433#7557433
+        function isElementInViewport(el) {
+
+            var rect = el.getBoundingClientRect();
+
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (
+                    window.innerHeight ||
+                    document.documentElement.clientHeight
+                ) &&
+                rect.right <= (
+                    window.innerWidth ||
+                    document.documentElement.clientWidth
+                )
+            );
+        }
+
+        H.wrap(H.Series.prototype, 'render', function deferRender(proceed) {
+            var series = this,
+                renderTo = this.chart.container.parentNode;
+
+            // It is appeared, render it
+            if (isElementInViewport(renderTo) || !series.options.animation) {
+                proceed.call(series);
+
+                // It is not appeared, halt renering until appear
+            } else {
+                pendingRenders.push({
+                    element: renderTo,
+                    appear: function () {
+                        proceed.call(series);
+                    }
+                });
+            }
+        });
+
+        function recalculate() {
+            pendingRenders.forEach(function (item) {
+                if (isElementInViewport(item.element)) {
+                    item.appear();
+                    H.erase(pendingRenders, item);
+                }
+            });
+        }
+
+        if (window.addEventListener) {
+            ['DOMContentLoaded', 'load', 'scroll', 'resize']
+                .forEach(function (eventType) {
+                    addEventListener(eventType, recalculate, false);
+                });
+        }
+
+    }(Highcharts));
     Highcharts.chart('stackedBar', {
 
         chart: {

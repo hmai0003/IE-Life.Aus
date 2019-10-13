@@ -33,7 +33,7 @@
 
 <div class="container" style="padding-bottom:20px;">
     <div class="row" style="margin-left: 0px;margin-right: 0px;">
-        <div class="col-lg-4 col-sm-1 imhv">
+        <div class="col-4 imhv">
             <img src="~/Images/Rugby.jpg" style="display: block; width: 100%; height: auto;" />
             <div class="overla">
                 <div class="content-details fadeIn-bottom">
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-sm-1 imhv">
+        <div class="col-4 imhv">
             <img src="~/Images/footy option1.png" style="display: block; width: 100%; height: auto;" />
             <div class="overla">
                 <div class="content-details fadeIn-bottom">
@@ -55,7 +55,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-sm-1 imhv">
+        <div class="col-4 imhv">
             <img src="~/Images/cricket option2.png" style="display: block; width: 100%; height: auto;" />
             <div class="overla">
                 <div class="content-details fadeIn-bottom">
@@ -69,13 +69,10 @@
         </div>
     </div>
 </div>
+
 <hr />
 
 <div class="w3-row" style="padding-top:20px;">
-    <div class="w3-col m6 w3-padding-large">
-        <img src="~/Images/socialsport.jpeg" class="full-image" />
-    </div>
-
     <div class="w3-col m6 w3-padding-large">
         <h3 class="w3-center"><span class="w3-tag w3-wide" style="background-color:#cc7a00; color:black; font-weight:bold">Social Sports</span></h3><br>
         <p class="w3-large">
@@ -83,76 +80,96 @@
             Social sport keeps you healthy and meets new friends. So why not leave the treadmill and have fun with your friends?
         </p>
         <br />
-        <a class="w3-left btn link" href='https://www.socialsport.com.au/' target="_blank">Read more >></a>
+        <a class="btn btn-primary" id="collbtn">
+            Find a play area
+        </a>
+    </div>
 
+    <div class="w3-col m6 w3-padding-large">
+        <img src="~/Images/socialsport.jpeg" class="full-image" />
     </div>
 </div>
 
 <hr />
 
-<div class="w3-container" id="introduction">
-    <div class="w3-content" style="max-width:700px">
-        <h3 class="w3-center" style="padding-top:30px; padding-bottom:30px;"><span class="w3-tag w3-wide" style="background-color:#cc7a00; color:black; font-weight:bold">Find Social Sport Venue or Public Play Area</span></h3>
-        <p class="w3-large">
-            Play a sport of your choice. You can choose to play social sports or play at a public activity area.
-        </p>
-    </div>
-</div>
-
-<br />
-<br />
-
-<div class="container" id="mapContainer">
-    <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-1">
-            <form id="socialForm">
-                <h4>Choose A Venue</h4><br />
-                <label class="option">
-                    Social sports
-                    <input type="radio" name="filters" value="social sports" checked="checked">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="option">
-                    Sport courts
-                    <input type="radio" name="filters" value="sport courts">
-                    <span class="checkmark"></span>
-                </label>
-            </form>
-            <form id="sportForm">
-                <br />
-                <h4>What kind of sport do you prefer?</h4><br>
-                <label class="option">
-                    Futsal
-                    <input type="radio" name="sports" value="Futsal" checked="checked">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="option">
-                    Netball
-                    <input type="radio" name="sports" value="Netball">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="option">
-                    Basketball
-                    <input type="radio" name="sports" value="Basketball">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="option">
-                    Footy
-                    <input type="radio" name="sports" value="Footy">
-                    <span class="checkmark"></span>
-                </label>
-            </form>
-
-            <button class="btn" onclick="search()">Search</button>
-        </div>
-        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-1">
-            <div id="map" style="height:480px;width:700px"></div>
+<div class="my-collapse" id="collapsableContent">
+    <div class="w3-container" id="introduction">
+        <div class="w3-content" style="max-width:700px">
+            <h3 class="w3-center" style="padding-top:30px; padding-bottom:30px;"><span class="w3-tag w3-wide" style="background-color:#cc7a00; color:black; font-weight:bold">Find Social Sport Venue or Public Play Area</span></h3>
+            <p class="w3-large">
+                Play a sport of your choice. You can choose to play social sports or play at a public activity area.
+            </p>
         </div>
     </div>
+
+    <br />
+    <br />
+
+    <div class="container" id="mapContainer">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-1">
+                <form id="socialForm">
+                    <h4>Choose A Venue</h4><br />
+                    <label class="option">
+                        Social sports
+                        <input type="radio" name="filters" value="social sports" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="option">
+                        Sport courts
+                        <input type="radio" name="filters" value="sport courts">
+                        <span class="checkmark"></span>
+                    </label>
+                </form>
+                <form id="sportForm">
+                    <br />
+                    <h4>What kind of sport do you prefer?</h4><br>
+                    <label class="option">
+                        Futsal
+                        <input type="radio" name="sports" value="Futsal" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="option">
+                        Netball
+                        <input type="radio" name="sports" value="Netball">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="option">
+                        Basketball
+                        <input type="radio" name="sports" value="Basketball">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="option">
+                        Footy
+                        <input type="radio" name="sports" value="Footy">
+                        <span class="checkmark"></span>
+                    </label>
+                </form>
+
+                <button class="btn" onclick="search()">Search</button>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-1">
+                <div id="map" style="height:480px;width:700px"></div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div id="results" class="row"></div>
+    <hr />
 </div>
-<hr />
-<div id="results" class="row"></div>
-<hr />
+
+<script>
+    var coll = document.getElementById("collbtn");
+
+    coll.addEventListener("click", function () {
+        var content = document.getElementById("collapsableContent");
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+</script>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1zde6CIKWcz5lnDUNnXFjlj2WuNS8hLI&libraries=places&callback=initMap"
         type="text/javascript"></script>

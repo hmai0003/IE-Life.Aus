@@ -4,80 +4,114 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container zero-margin zero-padding" style="width: 100%;">
-    <div class="row" style="text-align:center;">
-        <div class="col-12">
-            <header>
-                <h1>Memory Game</h1>
-            </header>
+    <div class="container zero-margin zero-padding" style="width: 100%;">
+        <div class="row" style="text-align:center;">
+            <div class="col-12">
+                <header>
+                    <h1>Memory Game</h1>
+                </header>
+            </div>
+        </div>
+
+        <div class="row" style="text-align:center; padding-top:10px;">
+            <div class="col-12">
+                <header>
+                    <h1>Instructions</h1>
+                </header>
+                <p>
+                    1) The objective of the game is to match cards.<br/>
+                    2) Match all cards to their relevent counterparts to complete the game.<br />
+                    3) Click on any card, then click on another card.<br />
+                    4) If your answer is correct, the cards wont flip back.<br />
+                    5) If your answer is incorrect, the cards will flip back.<br />
+                </p>
+            </div>
+        </div>
+
+
+
+        <div id="myModal" class="modal1">
+
+            <div class="modal-content1">
+                <div class="modal-header1" style="text-align:center;">
+
+                    <span class="close">&times;</span>
+                    <h2>Congratulations!!</h2>
+                </div>
+                <div class="modal-body1" style="text-align:center;">
+                    <p style="text-align:center;">You made <span id=c1> </span> moves </p>
+                    <p id="customMessage" style="text-align:center"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row" style="display: block; margin: auto;">
+            <section class="score-panel" style="text-align:center;">
+                <span id="c1" style="font-size:20px;">0</span> Move(s)
+            </section>
+        </div>
+
+        <div class="row" style="display: block; margin: auto;text-align:center;">
+            <a class="w3-center btn link" onClick="window.location.reload()">Play Again</a>
+        </div>
+
+        <div class="row memory-game">
+            <div class="memory-card" data-framework="aurelia">
+                <img class="front-face" src="~/Images/Thank You.png" alt="Aurelia" />
+                <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="aurelia">
+                <img class="front-face" src="~/Images/Ta (2).png" alt="Aurelia" />
+                <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="vue">
+                <img class="front-face" src="~/Images/Evo (2).png" alt="Vue" />
+                <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="vue">
+                <img class="front-face" src="~/Images/Evening (2).png" alt="Vue" />
+                <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+            </div>
+
+            <div class="memory-card" data-framework="angular">
+                <img class="front-face" src="~/Images/Magic 3.png" alt="Angular" />
+                <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="angular">
+                <img class="front-face" src="~/Images/Coffee3.png" alt="Angular" />
+                <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+            </div>
+
+            <div class="memory-card" data-framework="ember">
+                <img class="front-face" src="~/Images/HDI (2).png" alt="Ember" />
+                <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="ember">
+                <img class="front-face" src="~/Images/2nd Highest (2).png" alt="Ember" />
+                <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+            </div>
+
+            <div class="memory-card" data-framework="backbone">
+                <img class="front-face" src="~/Images/kang and emu (2).png" alt="Backbone" />
+                <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="backbone">
+                <img class="front-face" src="~/Images/Forward Thinking (2).png" alt="Backbone" />
+                <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+            </div>
+
+            <div class="memory-card" data-framework="react">
+                <img class="front-face" src="~/Images/Servo (2).png" alt="React" />
+                <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+            </div>
+            <div class="memory-card" data-framework="react">
+                <img class="front-face" src="~/Images/Service Station (2).png" alt="React" />
+                <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
+            </div>
         </div>
     </div>
-
-    <div class="row" style="display: block; margin: auto;">
-        <section class="score-panel" style="text-align:center;">
-            <span id="c1" style="font-size:20px;">0</span> Move(s)
-        </section>
-    </div>
-
-    <div class="row" style="display: block; margin: auto;text-align:center;">
-        <a class="w3-center btn link" onClick="window.location.reload()">Play Again</a>
-    </div>
-
-    <div class="row memory-game">
-        <div class="memory-card" data-framework="aurelia">
-            <img class="front-face" src="~/Images/Thank-You-PixTeller.png" alt="Aurelia" />
-            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
-        </div>
-        <div class="memory-card" data-framework="aurelia">
-            <img class="front-face" src="~/Images/Ta.png" alt="Aurelia" />
-            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
-        </div>
-        <div class="memory-card" data-framework="vue">
-            <img class="front-face" src="~/Images/Evo.png" alt="Vue" />
-            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
-        </div>
-        <div class="memory-card" data-framework="vue">
-            <img class="front-face" src="~/Images/Evening.png" alt="Vue" />
-            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
-        </div>
-
-        <div class="memory-card" data-framework="angular">
-            <img class="front-face" src="~/Images/Magic2.png" alt="Angular" />
-            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
-        </div>
-        <div class="memory-card" data-framework="angular">
-            <img class="front-face" src="~/Images/Coffee2.png" alt="Angular" />
-            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
-        </div>
-
-        <div class="memory-card" data-framework="ember">
-            <img class="front-face" src="~/Images/HDI.png" alt="Ember" />
-            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
-        </div>
-        <div class="memory-card" data-framework="ember">
-            <img class="front-face" src="~/Images/2nd highest.png" alt="Ember" />
-            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
-        </div>
-
-        <div class="memory-card" data-framework="backbone">
-            <img class="front-face" src="~/Images/Kang and Emu.png" alt="Backbone" />
-            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
-        </div>
-        <div class="memory-card" data-framework="backbone">
-            <img class="front-face" src="~/Images/Forward Thinking.png" alt="Backbone" />
-            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
-        </div>
-
-        <div class="memory-card" data-framework="react">
-            <img class="front-face" src="~/Images/Servo.png" alt="React" />
-            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
-        </div>
-        <div class="memory-card" data-framework="react">
-            <img class="front-face" src="~/Images/Service Station.png" alt="React" />
-            <img class="back-face" src="~/Images/Memory Game.png" alt="JS Badge" />
-        </div>
-    </div>
-</div>
 
 <script src="~/Scripts/gamescripts.js"></script>
 
