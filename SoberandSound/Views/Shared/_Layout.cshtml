@@ -255,10 +255,18 @@
             transform: translate(-50%, -50%);
             text-align: center;
         }
+
+        .footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px; padding:0 !important">
@@ -279,8 +287,15 @@
     <div class="w3-content" style="max-width:1100px">
         <div>
             @RenderBody()
+            <hr />
+            <div>
+                <p class="text-muted w3-center">
+                    Copyright ©2019 Tech Phantoms. All Rights Reserved.
+                </p>
+            </div>
         </div>
     </div>
+    
 
     <script>
         function myFunction() {

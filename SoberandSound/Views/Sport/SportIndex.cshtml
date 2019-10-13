@@ -146,13 +146,13 @@
             <button class="btn" onclick="search()">Search</button>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-1">
-            <div id="map" style="height:480px;width:700px"></div>
+            <div id="map" style="height:480px;width: auto"></div>
         </div>
     </div>
 </div>
 <hr />
 <div id="results" class="row"></div>
-<hr />
+
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1zde6CIKWcz5lnDUNnXFjlj2WuNS8hLI&libraries=places&callback=initMap"
         type="text/javascript"></script>
@@ -251,21 +251,26 @@
                 function displayResults(place) {
                     var placeCol = $('<div>', { class: 'col-lg-4 col-sm-6 mb-4' })
                     var placeCard = $('<div>', { id: 'place', class: 'card-body' });
-                    var placePhoto = $('<img>', { src: place.photos[0].getUrl({ maxWidth: 400, maxHeight: 200 }), class: 'img-fluid' });
-                    placePhoto.css({ 'height': '200px', 'width': '400px' });
+                    //var placePhoto = $('<img>', { src: place.photos[0].getUrl({ maxWidth: 400, maxHeight: 200 }), class: 'img-fluid' });
+                    //placePhoto.css({ 'height': '200px', 'width': '400px' });
                     var placeName = $('<h3>' + (place.name) + ' </h3>', { class: 'card-title' });
                     var placeAddress = $('<p>' + (place.formatted_address) + '</p>', { id: 'address' });
                     var placeButton = $('<a>', { id: results.indexOf(place) });
+                    var readMore = $('<a>');
+                   
+                    readMore.text("Visit website");
+                    readMore.attr("href", "https://www.socialsport.com.au/")
+                    readMore.attr("target", "_blank");
                     placeButton.addClass("btn");
                     placeButton.text("Show location");
-                    placeButton.attr("href", "#mapContainer");
-
+                    placeButton.attr("href", "#map");
                     resultsList.append(placeCol);
                     placeCol.append(placeCard);
-                    placeCard.append(placePhoto);
+                    //placeCard.append(placePhoto);
                     placeCard.append(placeName);
                     placeCard.append(placeAddress);
-                    placeCard.append(placeButton);
+                    placeCard.append(placeButton).append($('<br>'));
+                    placeCard.append(readMore);
 
                     $("a").click(function () {
                         var x = $(this).attr('id');
