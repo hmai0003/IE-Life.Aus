@@ -832,10 +832,6 @@
     <Content Include="Images\brain.jpg" />
     <Content Include="Views\Home\Homepage.cshtml" />
     <Content Include="Views\Home\Validate.cshtml" />
-    <Content Include="Views\Lifestyles\Create.cshtml" />
-    <Content Include="Views\Lifestyles\Delete.cshtml" />
-    <Content Include="Views\Lifestyles\Details.cshtml" />
-    <Content Include="Views\Lifestyles\Edit.cshtml" />
     <Content Include="Views\Lifestyles\Index.cshtml" />
     <Content Include="Views\Home\Game.cshtml" />
     <None Include="Images\.DS_Store" />
