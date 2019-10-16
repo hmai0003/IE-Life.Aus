@@ -36,7 +36,8 @@ function flipCard() {
 
 function checkForMatch() {
     moves++;
-    document.getElementById("c1").innerHTML = moves;
+    document.getElementById("movesCounter").innerHTML = moves;
+    document.getElementById("finalCounter").innerHTML = moves;
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
     isMatch ? disableCards() : unflipCards();
