@@ -622,6 +622,7 @@
     <Content Include="Images\beerPT.png" />
     <Content Include="Images\China.png" />
     <Content Include="Images\ciderPT.png" />
+    <Content Include="Images\drinkingText1.png" />
     <Content Include="Images\newCity.png" />
     <Content Include="Images\cityText.png" />
     <Content Include="Images\Coffee2.png" />
